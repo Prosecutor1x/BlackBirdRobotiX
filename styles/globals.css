@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+video {
+  background: white;
+}
+
+ @layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#14bcc8] via-[#1566e9] to-[#1f0690] hidden lg:text-sm px-4 lg:p-2 lg:px-10 rounded-3xl
+  }
+
+  .anchor-custom{
+    @apply hover:underline underline-offset-4 text-white text-base;
+  }
+
+  .input-primary {
+    @apply bg-grey px-6 py-2 focus:outline-none text-light_grey font-light rounded-md;
+  }
+}
