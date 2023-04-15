@@ -18,7 +18,7 @@ const Home = () => {
         className=" text-gray-200 mt-10 "
         rel="noreferrer"
       >
-        -by BlackBird India Ayan Da
+        -by BlackBird India
       </a>
     </div>
     </>
