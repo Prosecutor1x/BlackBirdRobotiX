@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 
-function Header() {
+const Header=()=> {
   return (
     <div className="flex bg-slate-800 justify-between h-20 space-x-16 z-20 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
       <div className="flex  items-center justify-evenly xl:space-x-8 lg:space-x-4">

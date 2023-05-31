@@ -3,7 +3,7 @@ import Demo from "../demo/Demo.main";
 
 
 
-function Hero() {
+const Hero=()=> {
   return (
     <div className="flex h-screen justify-center items-center bg-white px-9">
       <div className="w-2/3 flex flex-col justify-center items-center">
