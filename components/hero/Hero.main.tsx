@@ -3,6 +3,7 @@ import Demo from "../demo/Demo.main";
 
 
 
+
 export default function Hero () {
   return (
     <div className="flex h-screen justify-center items-center bg-white px-9">
