@@ -33,16 +33,10 @@ module.exports = {
         "2xl": "1370px",
       },
       colors: {
-        grey: "#18181C",
-        white: "#FFFFFF",
-        light_grey: "#9E9E9E",
-        lightpink: "#F3EFFF",
-        purple: "#8054FF",
-        hotPink: "#FF9898",
-        skin: "#FFECEF",
-        font1: "#374151",
+        
+        font1: "#708090",
         font2: "#44476A",
-        blue: "#0000FF",
+       
       },
     },
   },
