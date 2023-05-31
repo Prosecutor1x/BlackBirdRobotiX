@@ -2,11 +2,11 @@ import Link from 'next/link';
 import React from 'react';
 
 
-function Header() {
+export default function Header (){
   return (
-    <div className="flex backdrop-blur-lg justify-between h-20 space-x-16 z-20 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
+    <div className="flex bg-slate-800 justify-between h-20 space-x-16 z-20 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
       <div className="flex  items-center justify-evenly xl:space-x-8 lg:space-x-4">
-      
+
         <div className="hidden lg:flex md:gap-6">
           <a href="" target="_blank" rel="noreferrer">
             <h1
@@ -28,12 +28,12 @@ function Header() {
         
           <a href="">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
-              FAQs
+              Events
             </h1>
           </a>
           <Link href="">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
-             Testimonials
+             Courses
             </h1>
           </Link>
           <Link href="">
@@ -62,4 +62,3 @@ function Header() {
   );
 }
 
-export default Header;
