@@ -1,7 +1,8 @@
 
 
-import Header from "@/components/header/Navbar.main";
-import Hero from "@/components/hero/Hero.main";
+
+import Header from "@/components/header/main.navbar";
+import Hero from "@/components/hero/main.hero";
 import React from "react";
 
 
