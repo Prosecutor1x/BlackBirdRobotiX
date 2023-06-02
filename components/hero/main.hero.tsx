@@ -6,7 +6,7 @@ import Demo from "../demo/Demo.main";
 
 export default function Hero () {
   return (
-    <div className="lg:flex h-screen justify-center items-center bg-white px-9 gap-20">
+    <div className="lg:flex lg:min-h-screen justify-center items-center bg-white px-9 gap-20">
       <div className="lg:w-2/3 flex flex-col justify-center items-center">
         <img src="/logo.png" className="mt-10 " />
 
