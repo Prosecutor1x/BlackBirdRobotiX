@@ -51,7 +51,7 @@ const CoursesData = [
 console.log(CoursesData);
 const Courses = () => {
   return (
-    <div className=" text-black space-y-8 my-6 flex flex-col justify-center pb-32 pt-16 lg:pt-0 font-quicksand" id="courses">
+    <div className=" text-black space-y-8 lg:my-6 flex flex-col justify-center lg:pb-32  lg:pt-0 font-quicksand" id="courses">
       <h1 className="text-center text-3xl font-semibold my-4 "> Courses</h1>
       <>
         {CoursesData.map((data, id) => {

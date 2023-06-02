@@ -8,7 +8,7 @@ export default function Header (){
       <div className="flex  items-center  xl:space-x-8 lg:space-x-4">
         <img src='/logo.png' className='h-16'/> 
         <div className="hidden lg:flex md:gap-6">
-          <a href="" target="_blank" rel="noreferrer">
+          <a href="#" target="_blank" rel="noreferrer">
             <h1
               className="anchor-custom text-white whitespace-nowrap  font-semibold"
               aria-current="page"
@@ -36,11 +36,16 @@ export default function Header (){
              Courses
             </h1>
           </a>
-          <Link href="">
+          <a href="#aboutus">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               About Us
             </h1>
-          </Link>
+          </a>
+          <a href="#contactus">
+            <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
+              Contact Us
+            </h1>
+          </a>
         </div>
       </div>
 
