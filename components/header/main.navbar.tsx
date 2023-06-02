@@ -4,9 +4,9 @@ import React from 'react';
 
 export default function Header (){
   return (
-    <div className="flex bg-slate-800 justify-between h-20 space-x-16 z-20 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
-      <div className="flex  items-center justify-evenly xl:space-x-8 lg:space-x-4">
-
+    <div className="flex bg-slate-400 justify-center h-20 space-x-16 z-20 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
+      <div className="flex  items-center  xl:space-x-8 lg:space-x-4">
+        <img src='/logo.png' className='h-16'/> 
         <div className="hidden lg:flex md:gap-6">
           <a href="" target="_blank" rel="noreferrer">
             <h1
@@ -16,7 +16,7 @@ export default function Header (){
               Home
             </h1>
           </a>
-          <Link
+          {/* <Link
             href=""
             target="_blank"
             rel="noreferrer"
@@ -24,18 +24,18 @@ export default function Header (){
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               Products
             </h1>
-          </Link>
+          </Link> */}
         
-          <a href="">
+          {/* <a href="">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               Events
             </h1>
-          </a>
-          <Link href="">
+          </a> */}
+          <a href="#courses">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
              Courses
             </h1>
-          </Link>
+          </a>
           <Link href="">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               About Us
@@ -44,7 +44,7 @@ export default function Header (){
         </div>
       </div>
 
-      <div className="flex items-center gap-2 z-20 text-base">
+      {/* <div className="flex items-center gap-2 z-20 text-base">
         <Link href="/">
           <button className="lg:block justify-center btn-primary   whitespace-nowrap">
             <span className="font-bold ">Login</span>
@@ -57,7 +57,7 @@ export default function Header (){
         </Link>
        
 
-      </div>
+      </div> */}
     </div>
   );
 }
