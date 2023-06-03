@@ -1,4 +1,4 @@
-import { MinusIcon, AddIcon } from "@chakra-ui/icons";
+limport { MinusIcon, AddIcon } from "@chakra-ui/icons";
 import {
   Accordion,
   AccordionButton,
@@ -27,6 +27,7 @@ const CoursesData = [
     fourth: "Website Developement",
     fifth: "",
     sixth: "",
+    seven:"",
   },
   {
     category: "Classes 6 to 8",
@@ -36,6 +37,7 @@ const CoursesData = [
     fourth: "Artificial Intelligience",
     fifth: "Programming with Python and Java",
     sixth: "Virtual Reality",
+    seven: "Robotics",
   },
   {
     category: "Classes 9 and above",
@@ -45,6 +47,7 @@ const CoursesData = [
     fourth: "Artificial Intelligience",
     fifth: "Combat Robotics",
     sixth: "",
+    seven:"",
   },
 ];
 
@@ -75,6 +78,7 @@ const Courses = () => {
                 <h1>❤️{data.fourth}</h1>
                 {data.fifth && <h1>🧸{data.fifth}</h1>}
                 {data.sixth && <h1>🛬 {data.sixth}</h1>}
+                {data.seven && <h1> 🤖{data.seven}</h1>}
                 </div>
               </AccordionPanel>
             </AccordionItem>
