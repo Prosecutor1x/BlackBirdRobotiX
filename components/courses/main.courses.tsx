@@ -7,6 +7,7 @@ import {
   AccordionPanel,
   Box,
 } from "@chakra-ui/react";
+import { Category } from "@mui/icons-material";
 import React from "react";
 
 // interface ICourses {
@@ -21,13 +22,33 @@ import React from "react";
 const CoursesData = [
   {
     category: "Classes 3 to 5",
-    first: "Machine and Mechanisms",
-    second: "Robotics",
-    third: "IOT and 3D designs",
-    fourth: "Website Developement",
-    fifth: "",
-    sixth: "",
-    seven:"",
+    courses: [
+      {
+        name: "Machine and Mechanisms",
+        quote: "hi ",
+      },
+      {
+        name: "Robotics",
+        quote: " ",
+      },
+      {
+        name: "IOT and 3D designs",
+        quote: " ",
+      },
+      {
+        name: "",
+        quote: " ",
+      },
+      {
+        name: "",
+        quote: " ",
+      },
+      {
+        name: "",
+        quote: " ",
+      },
+    ],
+    id: 1,
   },
   {
     category: "Classes 6 to 8",
@@ -54,42 +75,72 @@ const CoursesData = [
 console.log(CoursesData);
 const Courses = () => {
   return (
-    <div className=" text-black space-y-8 lg:my-6 flex flex-col justify-center lg:pb-32  lg:pt-0 font-quicksand" id="courses">
+    <div
+      className=" text-black space-y-8 lg:my-6 flex flex-col justify-center lg:pb-32  lg:pt-0 font-quicksand"
+      id="courses"
+    >
       <h1 className="text-center text-3xl font-semibold my-4 "> Courses</h1>
       <>
         {CoursesData.map((data, id) => {
-          return(
+          return (
             <Accordion key={id} className="rounded-xl border " allowMultiple>
-            <AccordionItem className="rounded-xl border  ">
-              <h2>
-                <AccordionButton _expanded={{ bg:"#2f4f4f " , color: "white" }} className="rounded-xl bg-slate-300">
-                  <Box as="span" flex="1"  className="text-center font-semibold p-12 text-xl ">
-                  🧑‍🏫 {data.category} ✨⏰
-                  </Box>
-                  <AccordionIcon />
-                </AccordionButton>
-              </h2>
-              <AccordionPanel>
-                <div className="text-xl font-semibold">
+              <AccordionItem className="rounded-xl border  ">
+                <h2>
+                  <AccordionButton
+                    _expanded={{ bg: "#2f4f4f ", color: "white" }}
+                    className="rounded-xl bg-slate-300"
+                  >
+                    <Box
+                      as="span"
+                      flex="1"
+                      className="text-center font-semibold p-12 text-xl "
+                    >
+                      🧑‍🏫 {data.category} ✨⏰
+                    </Box>
+                    <AccordionIcon />
+                  </AccordionButton>
+                </h2>
+                <AccordionPanel>
+                  <div className="text-xl font-semibold">
+                    <h1>{data.first}</h1>
+                    <h1>{data.second}</h1>
+                    <h1>{data.third}</h1>
+                    <h1>{data.fourth}</h1>
+                    <h1>{data.fifth}</h1>
+                    <h1>{data.sixth}</h1>
+                  </div>
 
-                <h1>📱{data.first}</h1>
-                <h1>🤖{data.second}</h1>
-                <h1>🔥{data.third}</h1>
-                <h1>❤️{data.fourth}</h1>
-                {data.fifth && <h1>🧸{data.fifth}</h1>}
-                {data.sixth && <h1>🛬 {data.sixth}</h1>}
-                {data.seven && <h1> 🤖{data.seven}</h1>}
-                </div>
-              </AccordionPanel>
-            </AccordionItem>
-          </Accordion>
-         
-            
-          )
-          
+
+                  {data.courses?.map((category, id) => {
+                    return (
+                      <>
+                        {category.name && (
+                          <Accordion key={id} className="" allowMultiple>
+                            <AccordionItem className="border-none ">
+                              <h2>
+                                <AccordionButton >
+                                  <Box as="span" >
+                                    <div className="text-xl font-semibold">{category.name}</div>
+                                  </Box>
+                                  
+                                </AccordionButton>
+                              </h2>
+                              <AccordionPanel>
+                                <p>{category.quote}</p>
+                              </AccordionPanel>
+                            </AccordionItem>
+                          </Accordion>
+                        )}
+                      </>
+                    );
+                  })}
+                </AccordionPanel>
+              </AccordionItem>
+            </Accordion>
+          );
+
         })}
       </>
-      
     </div>
   );
 };

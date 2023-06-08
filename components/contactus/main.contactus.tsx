@@ -7,7 +7,7 @@ function Contact() {
 
       <div className="space-y-12 flex lg:flex-row flex-col items-center justify-evenly text-center">
         <div>
-          <h1 className="text-xl  my-3">Black Bird RobotiXs </h1>
+          <h1 className="text-xl my-3">Black Bird RobotiXs </h1>
           Email: blackbirdrobotix10@gmail.com
         </div>
         <div>
