@@ -58,6 +58,7 @@ const CoursesData = [
     fourth: "Artificial Intelligience",
     fifth: "Programming with Python and Java",
     sixth: "Virtual Reality",
+    seven: "Robotics",
   },
   {
     category: "Classes 9 and above",
@@ -67,6 +68,7 @@ const CoursesData = [
     fourth: "Artificial Intelligience",
     fifth: "Combat Robotics",
     sixth: "",
+    seven:"",
   },
 ];
 
@@ -108,6 +110,7 @@ const Courses = () => {
                     <h1>{data.sixth}</h1>
                   </div>
 
+
                   {data.courses?.map((category, id) => {
                     return (
                       <>
@@ -135,6 +138,7 @@ const Courses = () => {
               </AccordionItem>
             </Accordion>
           );
+
         })}
       </>
     </div>
