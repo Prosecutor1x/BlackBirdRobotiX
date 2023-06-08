@@ -72,10 +72,10 @@ const Demo = () => {
               <Input
                 type="text"
                 placeholder="Name"
-                value={demoData.name.slice(3)}
+                value={demoData.name}
                 onChange={(e) => {
                   setDemoData((data) => {
-                    return { ...data, name: "+91"+ e.target.value };
+                    return { ...data, name:  e.target.value };
                   });
                 }}
               />
@@ -84,10 +84,10 @@ const Demo = () => {
                 <Input
                   type="tel"
                   placeholder="Phone Number"
-                  value={demoData.phoneNumber}
+                  value={demoData.phoneNumber.slice(3)}
                   onChange={(e) => {
                     setDemoData((data) => {
-                      return { ...data, phoneNumber: e.target.value };
+                      return { ...data, phoneNumber:"+91" + e.target.value };
                     });
                   }}
                 />
