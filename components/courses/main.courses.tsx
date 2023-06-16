@@ -32,7 +32,6 @@ const CoursesData = [
         quote: " ",
       },
       {
-        name: "IOT and 3D designs",
         quote: " ",
       },
       {
@@ -49,25 +48,10 @@ const CoursesData = [
       },
     ],
     id: 1,
-  },
-  {
-    category: "Classes 6 to 8",
-    first: "App Developement",
-    second: "Learn to build and fly Drones and RC planes",
-    third: "IOT and Arduino",
-    fourth: "Artificial Intelligience",
-    fifth: "Programming with Python and Java",
-    sixth: "Virtual Reality",
-  },
-  {
-    category: "Classes 9 and above",
-    first: "Programming with Python and Javascript",
-    second: "Robotics",
-    third: "Learn to build and fly Drones and RC planes",
-    fourth: "Artificial Intelligience",
-    fifth: "Combat Robotics",
-    sixth: "",
-  },
+  },    
+
+                                                                                                                                          
+ 
 ];
 
 console.log(CoursesData);
@@ -99,14 +83,7 @@ const Courses = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel>
-                  <div className="text-xl font-semibold">
-                    <h1>{data.first}</h1>
-                    <h1>{data.second}</h1>
-                    <h1>{data.third}</h1>
-                    <h1>{data.fourth}</h1>
-                    <h1>{data.fifth}</h1>
-                    <h1>{data.sixth}</h1>
-                  </div>
+                  
 
                   {data.courses?.map((category, id) => {
                     return (

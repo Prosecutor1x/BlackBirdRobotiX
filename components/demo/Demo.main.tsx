@@ -1,17 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Input,
   InputGroup,
   InputLeftAddon,
   InputRightAddon,
+  Select,
 } from "@chakra-ui/react";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "@/lib/firebaseConfig";
+import countries from "@/database/countries";
+import { countryCodes } from "@/database/CountryCodes";
 
 interface DemoProps {
   phoneNumber: string;
   emailId: string;
   name: string;
+  countryCode: string;
+  country: string;
+  age: number;
 }
 
 const Demo = () => {
@@ -19,8 +25,18 @@ const Demo = () => {
     phoneNumber: "",
     emailId: "",
     name: "",
+    countryCode: "",
+    country: "",
+    age: NaN,
   });
   const [popup, setPopup] = React.useState(0);
+  useEffect(() => {
+    const tempCode = countryCodes.find((data) => data.name == demoData.country);
+    tempCode &&
+      setDemoData((data) => {
+        return { ...data, countryCode: tempCode.dial_code };
+      });
+  }, [demoData.country]);
 
   async function addDemo(demodata: DemoProps) {
     if (demodata) {
@@ -31,11 +47,14 @@ const Demo = () => {
         setDemoData({
           name: "",
           emailId: "",
-          phoneNumber: "+91",
+          countryCode: "",
+          phoneNumber: "",
+          country: "",
+          age: NaN,
         });
-        setTimeout(()=>{
-            setPopup(0)
-        },4000)
+        setTimeout(() => {
+          setPopup(0);
+        }, 4000);
       } else {
         try {
           await setDoc(demoRef, demodata);
@@ -53,45 +72,85 @@ const Demo = () => {
     <div className="text-slate-700 border shadow-[1px_1px_2px_2px_#d1d1d1] p-4 rounded-lg ">
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
-            <img src="/success.png" className="h-60"/>
-          <h1 className="font-semibold text-xl text-green-500  my-6">Sucessfully Registered</h1>
+          <img src="/success.png" className="h-60" />
+          <h1 className="font-semibold text-xl text-green-500  my-6">
+            Sucessfully Registered . You will be contacted soon{" "}
+          </h1>
         </div>
       ) : popup == 2 ? (
         <div className="flex justify-center items-center flex-col ">
-        <img src="/success.png" className="h-60"/>
-      <h1 className="font-semibold text-xl text-yellow-500  my-6">Already Registered  </h1>
-    </div>
+          <img src="/success.png" className="h-60" />
+          <h1 className="font-semibold text-xl text-yellow-500  my-6">
+            Already Registered{" "}. Try registering with another email id .
+          </h1>
+        </div>
       ) : (
         <div>
-          <div>
+          <div className="flex flex-col justify-center items-center">
             <h1 className=" text-center text-lg">
-              🌟 Dive into the world of knowledge: Book your ✨ demo class
-              today! ✨
+              🌟 Book Your Free Class !! ✨
             </h1>
+            
             <div className="p-2 mt-4 space-y-3">
               <Input
                 type="text"
-                placeholder="Name"
+                placeholder="Child's Name"
                 value={demoData.name}
                 onChange={(e) => {
                   setDemoData((data) => {
-                    return { ...data, name:  e.target.value };
+                    return { ...data, name: e.target.value };
                   });
                 }}
               />
+              <Input
+                type="number"
+                placeholder="Age"
+                value={demoData.age}
+                onChange={(e) => {
+                  setDemoData((data :any) => {
+                    return { ...data, age: e.target.value };
+                  });
+                }}
+              />
+              <Select
+         
+                onChange={(e: any) =>
+                  setDemoData((data) => {
+                    return { ...data, country: e.target.value };
+                  })
+                }
+                value={demoData.country}
+                backgroundColor={"#FBFAFF"}
+                
+                placeholder="Select Country"
+              >
+                {countries.map((c, i) => {
+                  return (
+                    <option value={c} key={`${c}-${i}`}>
+                      {c}
+                    </option>
+                  );
+                })}
+              </Select>
               <InputGroup>
-                <InputLeftAddon children="+91" />
+                <InputLeftAddon children={demoData.countryCode} />
                 <Input
                   type="tel"
-                  placeholder="Phone Number"
-                  value={demoData.phoneNumber.slice(3)}
+                  placeholder="Phone Number (Whatsapp)"
+                  value={demoData.phoneNumber.slice(
+                    demoData.countryCode.length
+                  )}
                   onChange={(e) => {
                     setDemoData((data) => {
-                      return { ...data, phoneNumber:"+91" + e.target.value };
+                      return {
+                        ...data,
+                        phoneNumber: demoData.countryCode + e.target.value,
+                      };
                     });
                   }}
                 />
               </InputGroup>
+              
               <Input
                 type="text"
                 placeholder="Email Id"
@@ -104,13 +163,13 @@ const Demo = () => {
               />
             </div>
             <button
-              className="w-full bg-slate-800 my-4 rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100"
+              className="w-[50%]  bg-slate-800 my-4  rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100"
               disabled={
                 !demoData.emailId || !demoData.name || !demoData.phoneNumber
               }
               onClick={() => addDemo(demoData)}
             >
-              Submit
+              Book Now
             </button>
           </div>
         </div>

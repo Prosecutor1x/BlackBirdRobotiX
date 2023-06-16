@@ -1,13 +1,21 @@
 import Link from 'next/link';
 import React from 'react';
+import MuiDrawer from './drawer.navbar';
+
 
 
 export default function Header (){
   return (
-    <div className="flex bg-slate-400 justify-center h-20 space-x-16 z-20 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
-      <div className="flex  items-center  xl:space-x-8 lg:space-x-4">
-        <img src='/logo.png' className='h-16'/> 
-        <div className="hidden lg:flex md:gap-6">
+    <div className="flex bg-theme justify-center h-20 space-x-16 z-40 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
+      <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
+        <div className=' flex items-center'>
+
+        <img src='/logo.png' className='h-16'/>
+        <img src='/logotxt.png' className='h-40'/>  
+          
+        
+        </div>
+        <div className="hidden lg:flex md:gap-10">
           <a href="#" target="_blank" rel="noreferrer">
             <h1
               className="anchor-custom text-white whitespace-nowrap  font-semibold"
@@ -63,7 +71,11 @@ export default function Header (){
        
 
       </div> */}
+       {/* <div className="lg:hidden">
+        <MuiDrawer/>
+       </div> */}
     </div>
   );
 }
 
+      

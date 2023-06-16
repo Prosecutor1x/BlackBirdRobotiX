@@ -34,8 +34,10 @@ module.exports = {
       },
       colors: {
         
-        font1: "#708090",
+        theme: "#045b63",
         font2: "#44476A",
+        font1: "#045b63",
+       
        
       },
     },
