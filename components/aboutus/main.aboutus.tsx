@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="" id="aboutus">
       <h1 className="text-3xl font-semibold text-center mb-12 ">About Us</h1>
-      <p className="text-semibold text-xl text-center px-6 bg-[#bab3d46b] p-12 rounded-xl">
+      <p className="text-semibold text-xl text-center px-6 bg-[#a5ecf2d8] p-12 rounded-xl">
         🚀🤖 A perfect fusion of Science, Technology, Engineering, and
         Mathematics is offered by BlackBird RobotiX. We have been working
         tirelessly since 2016 to develop cutting-edge Robots, AI, and Drones.
