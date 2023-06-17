@@ -53,6 +53,7 @@ const Courses = () => {
                 <AccordionPanel>
                   
 
+
                   {data.courses?.map((category, id) => {
                     return (
                       <>
@@ -80,6 +81,7 @@ const Courses = () => {
               </AccordionItem>
             </Accordion>
           );
+
         })}
       </>
     </div>
