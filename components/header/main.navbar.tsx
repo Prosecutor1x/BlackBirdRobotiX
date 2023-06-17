@@ -1,19 +1,14 @@
-import Link from 'next/link';
-import React from 'react';
-import MuiDrawer from './drawer.navbar';
+import Link from "next/link";
+import React from "react";
+import MuiDrawer from "./drawer.navbar";
 
-
-
-export default function Header (){
+export default function Header() {
   return (
-    <div className="flex bg-theme justify-center h-20 space-x-16 z-40 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white backdrop-brightness-200">
+    <div className="flex  bg-gradient-to-r  via-theme  from-emerald-500  to-emerald-500   justify-center h-20 space-x-16 z-40 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white ">
       <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
-        <div className=' flex items-center'>
-
-        <img src='/logo.png' className='h-16'/>
-        <img src='/logotxt.png' className='h-40'/>  
-          
-        
+        <div className=" flex items-center">
+          <img src="/fl.png" className="h-24" />
+          <img src="/bb.png" className="h-40" />
         </div>
         <div className="hidden lg:flex md:gap-10">
           <a href="#" target="_blank" rel="noreferrer">
@@ -33,7 +28,7 @@ export default function Header (){
               Products
             </h1>
           </Link> */}
-        
+
           {/* <a href="">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               Events
@@ -41,7 +36,7 @@ export default function Header (){
           </a> */}
           <a href="#courses">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
-             Courses
+              Courses
             </h1>
           </a>
           <a href="#aboutus">
@@ -71,11 +66,9 @@ export default function Header (){
        
 
       </div> */}
-       {/* <div className="lg:hidden">
+      {/* <div className="lg:hidden">
         <MuiDrawer/>
        </div> */}
     </div>
   );
 }
-
-      

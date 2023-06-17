@@ -19,12 +19,12 @@ const ImageCarouselHero = () => {
   const [mySwiper, setMySwiper] = useState<any>(null);
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       
 
-      <div className=" rounded-3xl flex  items-center justify-between ">
-     <button
-          className=" text-slate-800 border-[3px] border-theme rounded-full "
+      <div className="rounded-3xl  flex  items-center justify-between ">
+     {/* <button
+          className=" text-slate-800 lg:border-[3px] border-theme rounded-full "
           onClick={() => {
             if (mySwiper) mySwiper.slidePrev();
           }}
@@ -33,11 +33,11 @@ const ImageCarouselHero = () => {
             size={35}
             className="p-1 bg-white  rounded-full md:block hidden "
           />
-        </button>
+        </button> */}
         <Swiper
           onInit={(ev: any) => setMySwiper(ev)}
           slidesPerView={1}
-          pagination={true}
+          //pagination={true}
           spaceBetween={10}
           //navigation={true}
           autoplay={{
@@ -51,13 +51,13 @@ const ImageCarouselHero = () => {
           {Images.map((item, i) => {
             return (
               <SwiperSlide key={i} className="">
-                <img src={item} className="rounded-3xl bg-theme p-1  h-[90%] contrast-50 " />
+                <img src={item} className="rounded-3xl bg-theme p-1  lg:h-[80%] contrast-50 " />
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <button
-          className=" text-slate-800 border-[3px] border-theme rounded-full"
+        {/* <button
+          className=" text-slate-800 lg:border-[3px] border-theme rounded-full"
           onClick={() => {
             if (mySwiper) mySwiper.slideNext();
           }}
@@ -66,7 +66,7 @@ const ImageCarouselHero = () => {
             size={35}
             className="p-1 bg-white  rounded-full md:block hidden "
           />
-        </button>
+        </button> */}
       </div>
     </div>
   );
