@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { Category } from "@mui/icons-material";
 import React from "react";
+import  CoursesData  from "../../database/courseData";
 
 // interface ICourses {
 //   category: string;
@@ -19,40 +20,7 @@ import React from "react";
 //   fifth: string;
 //   sixth: string;
 // }
-const CoursesData = [
-  {
-    category: "Classes 3 to 5",
-    courses: [
-      {
-        name: "Machine and Mechanisms",
-        quote: "hi ",
-      },
-      {
-        name: "Robotics",
-        quote: " ",
-      },
-      {
-        quote: " ",
-      },
-      {
-        name: "",
-        quote: " ",
-      },
-      {
-        name: "",
-        quote: " ",
-      },
-      {
-        name: "",
-        quote: " ",
-      },
-    ],
-    id: 1,
-  },    
 
-                                                                                                                                          
- 
-];
 
 console.log(CoursesData);
 const Courses = () => {

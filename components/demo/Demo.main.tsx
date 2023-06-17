@@ -69,7 +69,7 @@ const Demo = () => {
   }
 
   return (
-    <div className="text-slate-700 border shadow-[1px_1px_2px_2px_#d1d1d1] p-4 rounded-lg ">
+    <div className="text-slate-700 border shadow-[1px_1px_2px_1px_#d1d1d1] p-4 rounded-lg  mt-16 bg-white ">
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
           <img src="/success.png" className="h-60" />
@@ -86,15 +86,16 @@ const Demo = () => {
         </div>
       ) : (
         <div>
-          <div className="flex flex-col justify-center items-center">
-            <h1 className=" text-center text-lg">
-              🌟 Book Your Free Class !! ✨
+          <div className="flex flex-col justify-center items-center ">
+            <h1 className=" text-center text-base font-bold ">
+              Book a Demo Session
             </h1>
             
             <div className="p-2 mt-4 space-y-3">
               <Input
                 type="text"
                 placeholder="Child's Name"
+                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                 value={demoData.name}
                 onChange={(e) => {
                   setDemoData((data) => {
@@ -105,6 +106,7 @@ const Demo = () => {
               <Input
                 type="number"
                 placeholder="Age"
+                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                 value={demoData.age}
                 onChange={(e) => {
                   setDemoData((data :any) => {
@@ -123,6 +125,7 @@ const Demo = () => {
                 backgroundColor={"#FBFAFF"}
                 
                 placeholder="Select Country"
+            
               >
                 {countries.map((c, i) => {
                   return (
@@ -137,6 +140,7 @@ const Demo = () => {
                 <Input
                   type="tel"
                   placeholder="Phone Number (Whatsapp)"
+                  _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                   value={demoData.phoneNumber.slice(
                     demoData.countryCode.length
                   )}
@@ -155,6 +159,7 @@ const Demo = () => {
                 type="text"
                 placeholder="Email Id"
                 value={demoData.emailId}
+                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                 onChange={(e) => {
                   setDemoData((data) => {
                     return { ...data, emailId: e.target.value };
@@ -163,13 +168,13 @@ const Demo = () => {
               />
             </div>
             <button
-              className="w-[50%]  bg-slate-800 my-4  rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100"
+              className="w-[95%]  bg-theme my-4 text-base rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100"
               disabled={
                 !demoData.emailId || !demoData.name || !demoData.phoneNumber
               }
               onClick={() => addDemo(demoData)}
             >
-              Book Now
+              Book
             </button>
           </div>
         </div>
