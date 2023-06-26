@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Pagination, Navigation ,EffectCoverflow} from 'swiper';
 
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 
@@ -13,6 +13,9 @@ const Images = [
     "/hero/1.JPG",
     "/hero/2.JPG",
     "/hero/3.JPG",
+    "/hero/4.jpg",
+  
+   
 ]
 
 const ImageCarouselHero = () => {
@@ -36,6 +39,8 @@ const ImageCarouselHero = () => {
         </button> */}
         <Swiper
           onInit={(ev: any) => setMySwiper(ev)}
+          grabCursor={true}
+          loop={true}
           slidesPerView={1}
           //pagination={true}
           spaceBetween={10}
@@ -44,14 +49,14 @@ const ImageCarouselHero = () => {
             delay: 2000,
             disableOnInteraction: false,
           }}
-          loop={true}
-          modules={[Pagination, Navigation, Autoplay]}
-          className=" mx-auto  "
+          
+          modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
+          className=" mx-auto"
         >
           {Images.map((item, i) => {
             return (
               <SwiperSlide key={i} className="">
-                <img src={item} className="rounded-3xl bg-theme p-1  lg:h-[80%] contrast-50 " />
+                <img src={item} className="h-[70%] border-2  p-2 rounded-br-[80px] rounded-t-[80px] bg-gray-200 p-0.5 " />
               </SwiperSlide>
             );
           })}

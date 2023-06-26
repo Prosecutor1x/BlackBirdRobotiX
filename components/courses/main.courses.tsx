@@ -21,6 +21,124 @@ import  CoursesData  from "../../database/courseData";
 //   sixth: string;
 // }
 
+const data =[
+  {
+    category:"Ages 6+ to 10+",
+    id:1,
+    courses:[
+      {
+        name:"Scratch Junior",
+        quote:"Entry level coding platform for logical developement. Register Now!!",
+        id:1,
+      },
+      {
+        name:"Blocky Programming",
+        quote:"Games that help to learn with fun. Simple programable code blocks for beginners to start skill training. Register now!!",
+        id:2,
+      },
+      {
+        name:"Robotics and Artificial Intelligence",
+        quote:"Build a robot, code it and run it. Encourage curiosity, creativity and innovation using robots. Register now!!",
+        id:3,
+      },
+      {
+        name:"Scratch Coding",
+        quote:"Math’s is fun and solving problem is easy now. Elementary level educational tool for children by a Block-Based Visual Programming Language. Register now! ",
+        id:4,
+      }
+    ]
+  },
+  {
+    category:"Ages 10+ to 14+",
+    id:2,
+    courses:[
+      {
+        name:"Mobile App Developement",
+        quote:"Bored using preinstalled aops and games in your mobile then make your own. Register Now !!",
+        id:1,
+      },
+      {
+        name:"IoT and Arduino",
+        quote:"Skills that Combine hardwar and software togethaer. Step into Innovation and hands-on Technology. Register Now !!",
+        id:2,
+      },
+      {
+        name:"Web Design & Development",
+        quote:"Make your own identity in internet by creating and designing a website. Register Now !! ",
+        id:3,
+      },
+      {
+        name:"Python Programming",
+        quote:"A high-level general-purpose programming language extremely popular among code developers. Register Now !!",
+        id:4,
+      },
+      {
+        name:"Robotics",
+        quote:"Build a robot, code it and run it. Encourage curiosity, creativity and innovation using robots. Register now!!",
+        id:5,
+      },
+      {
+        name:"Artificial Intelligence",
+        quote:"Machines can be made inteligent and programmed to enhance its ability. Want to know more.. Register Now !!",
+        id:6,
+      }
+    ]
+  },
+  {
+    category:"Ages 14+ onwards",
+    id:3,
+    courses:[
+      {
+        name:"Mobile App Developement",
+        quote:"Bored using preinstalled aops and games in your mobile then make your own. Register Now !!",
+        id:1,
+      },
+      {
+        name:"IoT and Arduino/Rasphberry Pi",
+        quote:"Skills that Combine hardwar and software togethaer. Step into Innovation and hands-on Technology. Register Now !!",
+        id:2,
+      },
+      {
+        name:"Web Design & Development",
+        quote:"Make your own identity in internet by creating and designing a website. Register Now !! ",
+        id:3,
+      },
+      {
+        name:"Python Programming",
+        quote:"A high-level general-purpose programming language extremely popular among code developers. Register Now !!",
+        id:4,
+      },
+      {
+        name:"Robotics",
+        quote:"Build a robot, code it and run it. Encourage curiosity, creativity and innovation using robots. Register now!!",
+        id:5,
+      },
+      {
+        name:"Artificial Intelligence",
+        quote:"Machines can be made inteligent and programmed to enhance its ability. Want to know more.. Register Now !!",
+        id:6,
+      },
+      {
+        name:"Drone Developement",
+        quote:"Knowledge is limitless as the sky, it is time to fly high. Register Now !!",
+        id:6,
+      },
+      {
+        name:"Autonomus and Manual Bots",
+        quote:"Robots are build to solve task and work effectively and efficiently. Register Now !!",
+        id:6,
+      },
+      {
+        name:"Combat Robotics",
+        quote:"Have you ever seen robots fighting, NO! lets join the battle of bots because It's Robot Fighting Time. Register Now !!",
+        id:6,
+      }
+    ]
+  }
+]
+
+
+
 
 console.log(CoursesData);
 const Courses = () => {
@@ -31,27 +149,27 @@ const Courses = () => {
     >
       <h1 className="text-center text-3xl font-semibold my-4 "> Courses</h1>
       <>
-        {CoursesData.map((data, id) => {
+        {data.map((data, id) => {
           return (
-            <Accordion key={id} className="rounded-xl border " allowMultiple>
+            <Accordion key={id} className="rounded-xl border " >
               <AccordionItem className="rounded-xl border  ">
                 <h2>
                   <AccordionButton
-                    _expanded={{ bg: "#2f4f4f ", color: "white" }}
-                    className="rounded-xl bg-slate-300"
+                    
+                    className="rounded-xl bg-slate-300 bg-emerald-500"
                   >
                     <Box
                       as="span"
                       flex="1"
-                      className="text-center font-semibold p-12 text-xl "
+                      className="text-center font-semibold p-2 text-xl "
                     >
-                      🧑‍🏫 {data.category} ✨⏰
+                       {data.category} 
                     </Box>
-                    <AccordionIcon />
+               
                   </AccordionButton>
                 </h2>
-                <AccordionPanel>
-                  
+                
+                
 
 
                   {data.courses?.map((category, id) => {
@@ -63,7 +181,8 @@ const Courses = () => {
                               <h2>
                                 <AccordionButton >
                                   <Box as="span" >
-                                    <div className="text-xl font-semibold">{category.name}</div>
+                                    
+                                    <div className="text-xl font-semibold">◉ {category.name}</div>
                                   </Box>
                                   
                                 </AccordionButton>
@@ -77,13 +196,14 @@ const Courses = () => {
                       </>
                     );
                   })}
-                </AccordionPanel>
+             
               </AccordionItem>
             </Accordion>
           );
 
         })}
       </>
+      <h1 className="text-center text-2xl text-theme">For any Queries Book a Demo Session or Call/Whatsapp us at +91 8013100878 </h1>
     </div>
   );
 };
