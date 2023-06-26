@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
   return (
     <Html lang="en">
-      <title>Black Bird RobotiXs</title>
+      <title>BlackBird RobotiX</title>
       <link
         rel="icon"
         href="/logo.png"
