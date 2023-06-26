@@ -69,32 +69,32 @@ const Demo = () => {
   }
 
   return (
-    <div className="text-slate-700 border shadow-[1px_1px_2px_1px_#d1d1d1] p-4 rounded-lg  mt-16 bg-white ">
+    <div className="text-slate-700 border shadow-[1px_1px_2px_1px_#d1d1d1] p-4 rounded-lg  bg-white ">
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
-          <img src="/success.png" className="h-60" />
-          <h1 className="font-semibold text-xl text-green-500  my-6">
-            Sucessfully Registered . You will be contacted soon{" "}
+          <img src="/RobotGif.gif" className="h-60" />
+          <h1 className="font-semibold text-xl text-green-500 text-center  my-6">
+            Thank You, Demo Registered Successfully.<br></br><span className="text-base text-center"> We will contact you shorlty and schedule the date and time of demo{" "}</span>
           </h1>
         </div>
       ) : popup == 2 ? (
         <div className="flex justify-center items-center flex-col ">
-          <img src="/success.png" className="h-60" />
+          <img src="/RobotGif.gif" className="h-60" />
           <h1 className="font-semibold text-xl text-yellow-500  my-6">
-            Already Registered{" "}. Try registering with another email id .
+            Already Registered{" "}. Register with opther email id .
           </h1>
         </div>
       ) : (
         <div>
-          <div className="flex flex-col justify-center items-center ">
+          <div className="flex flex-col ">
             <h1 className=" text-center text-base font-bold ">
-              Book a Demo Session
+              Book a FREE Demo
             </h1>
             
             <div className="p-2 mt-4 space-y-3">
               <Input
                 type="text"
-                placeholder="Child's Name"
+                placeholder="Enter Child's Name"
                 _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                 value={demoData.name}
                 onChange={(e) => {
@@ -105,7 +105,7 @@ const Demo = () => {
               />
               <Input
                 type="number"
-                placeholder="Age"
+                placeholder="Child's Age"
                 _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                 value={demoData.age}
                 onChange={(e) => {
@@ -139,7 +139,7 @@ const Demo = () => {
                 <InputLeftAddon children={demoData.countryCode} />
                 <Input
                   type="tel"
-                  placeholder="Phone Number (Whatsapp)"
+                  placeholder="Mobile Number(Whatsapp Only)"
                   _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                   value={demoData.phoneNumber.slice(
                     demoData.countryCode.length
@@ -157,7 +157,7 @@ const Demo = () => {
               
               <Input
                 type="text"
-                placeholder="Email Id"
+                placeholder="Email Address"
                 value={demoData.emailId}
                 _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
                 onChange={(e) => {
@@ -167,8 +167,11 @@ const Demo = () => {
                 }}
               />
             </div>
+            <div className="w-full flex justify-center">
+
+
             <button
-              className="w-[95%]  bg-theme my-4 text-base rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100"
+              className=" w-[95%] bg-theme my-4 text-base rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100 z-20"
               disabled={
                 !demoData.emailId || !demoData.name || !demoData.phoneNumber
               }
@@ -177,6 +180,7 @@ const Demo = () => {
               Book
             </button>
           </div>
+            </div>
         </div>
       )}
     </div>

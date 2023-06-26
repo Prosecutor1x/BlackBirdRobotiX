@@ -13,12 +13,23 @@ const Home = () => {
   return (
     <div className="bg-[#FAF9F6]">
       <Header />
-      <div className="px-4 font-quicksand space-y-12 my-12 bg-[#FAF9F6] ">
+      <div className="px-4 font-quicksand space-y-12  bg-[#FAF9F6]">
+        <div className="relative space-y-12">
         <Hero />
+        <img
+        src="/hero/Tile.png"   
+        className="absolute  -bottom-36 h-[55%]  left-1/2 transform -translate-x-1/2 lg:block hidden "  
+      />
+      <img
+        src="/hero/Tile.png"   
+        className=" h-[55%]  lg:hidden "  
+      />
+        </div>
+       
         <Courses/>
         <About/>
-        
-      </div>
+        </div>
+     
       <Contact/>
     </div>
   );

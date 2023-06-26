@@ -4,14 +4,14 @@ import MuiDrawer from "./drawer.navbar";
 
 export default function Header() {
   return (
-    <div className="flex  bg-gradient-to-r  via-theme  from-emerald-500  to-emerald-500   justify-center h-20 space-x-16 z-40 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white ">
+    <div className="flex  bg-gradient-to-r  from-emerald-700  to-emerald-700  via-emerald-500   justify-center h-20 space-x-16 z-40 fixed top-0  w-full items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white ">
       <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
         <div className=" flex items-center">
           <img src="/fl.png" className="h-24" />
           <img src="/bb.png" className="h-40" />
         </div>
         <div className="hidden lg:flex md:gap-10">
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="#">
             <h1
               className="anchor-custom text-white whitespace-nowrap  font-semibold"
               aria-current="page"

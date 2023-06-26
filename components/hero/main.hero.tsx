@@ -5,19 +5,16 @@ import ImageCarouselHero from "./swiper.hero";
 export default function Hero() {
   return (
     <div className="relative ">
-      <img
-        src="/hero/Tile.png"
-        className="absolute z-20 -bottom-20 h-[55%]  left-1/2 transform -translate-x-1/2  "
-      />
-      <div className="lg:flex  lg:min-h-screen justify-center   lg:px-9 gap-20 bg-[#FAF9F6]">
+    
+      <div className="lg:flex  lg:min-h-screen justify-between items-center  lg:px-9 gap-20 bg-[#FAF9F6]">
         <div className="lg:w-3/5 relative  flex-col justify-center items-center mt-32 lg:mt-0">
-          <img
+          {/* <img
             src="/logo.png"
             className="absolute z-20  top-1/2  rounded-xl lg:h-64 h-32  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          />
+          /> */}
           <ImageCarouselHero />
         </div>
-        <div className="lg:w-2/5 mt-12 lg:mt-0">
+        <div className="lg:w-1/3 mt-12 lg:mt-0">
           <Demo />
         </div>
       </div>
