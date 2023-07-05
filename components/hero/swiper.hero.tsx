@@ -56,7 +56,7 @@ const ImageCarouselHero = () => {
           {Images.map((item, i) => {
             return (
               <SwiperSlide key={i} className="">
-                <img src={item} className="h-[70%] border-2  p-2 rounded-br-[80px] rounded-t-[80px] bg-gray-200 p-0.5 " />
+                <img src={item} className=" border-2  p-1 rounded-br-[80px] rounded-t-[80px] bg-gray-200 " />
               </SwiperSlide>
             );
           })}
