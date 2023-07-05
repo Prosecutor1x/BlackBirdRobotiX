@@ -144,19 +144,19 @@ console.log(CoursesData);
 const Courses = () => {
   return (
     <div
-      className=" text-black space-y-8 lg:my-6 flex flex-col justify-center lg:pb-32  lg:pt-0 font-quicksand"
+      className=" text-black space-y-8  flex flex-col justify-center lg:pb-32  lg:pt-0 font-quicksand"
       id="courses"
     >
       <h1 className="text-center text-3xl font-semibold my-4 "> Courses</h1>
       <>
         {data.map((data, id) => {
           return (
-            <Accordion key={id} className="rounded-xl border " >
+            <Accordion key={id} id={data.category} className="rounded-xl border " >
               <AccordionItem className="rounded-xl border  ">
                 <h2>
                   <AccordionButton
                     
-                    className="rounded-xl bg-slate-300 bg-emerald-500"
+                    className="rounded-xl  bg-emerald-300"
                   >
                     <Box
                       as="span"

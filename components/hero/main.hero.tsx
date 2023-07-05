@@ -6,35 +6,18 @@ export default function Hero() {
   return (
     <div className="relative ">
     
-      <div className="lg:flex  lg:min-h-screen justify-between items-center  lg:px-9 gap-20 bg-[#FAF9F6]">
-        <div className="lg:w-3/5 relative  flex-col justify-center items-center mt-32 lg:mt-0">
-          {/* <img
-            src="/logo.png"
-            className="absolute z-20  top-1/2  rounded-xl lg:h-64 h-32  left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          /> */}
+      <div className="lg:flex  lg:min-h-screen justify-between items-center  lg:px-12 gap-28 bg-[#FAF9F6]">
+        
+        <div className="lg:w-2/3 mt-12 lg:mt-0 p-10 rounded-2xl bg-emerald-100 flex flex-col space-y-4  ">
+          <p className="lg:text-lg  font-semibold text-center leading-2 "> A blog (a truncation of "weblog")[1] is an informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order so that the most recent post appears first, at the top of the web page. Until 2009, blogs were usually the work of a single individual,[citation needed] occasionally of a small group, and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) emerged, featuring the writing of multiple authors and sometimes professionally edited. MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, and similar institutions account for an increasing quantity of blog traffic. The rise of Twitter and other "microblogging" systems helps integrate MABs and single-author blogs into the news media. Blog can also be used as a verb, meaning to maintain or add content to a blog.</p>
+         <a href="#book"><button  className="bg-font2 p-2 w-full rounded-lg text-white font-semibold active:scale-95">Book Now</button></a> 
+        </div>
+        <div className="lg:w-2/5 relative  flex-col justify-center items-center mt-32 lg:mt-0">
+         
           <ImageCarouselHero />
         </div>
-        <div className="lg:w-1/3 mt-12 lg:mt-0">
-          <Demo />
-        </div>
       </div>
-      <div className=" w-full justify-evenly flex items-center px-12 gap-4">
-        {/* <img src="/hero/hero.png" className="w-2/5 bg-theme p-1 rounded-2xl "/> */}
-        {/* <div className="typewriter">
-
-      <h1 className="lg:text-5xl font-semibold text-font1  ">
-        Be Innovative <br></br> Be Imaginative <br></br> Be Inventive <br></br>The 3 pillars of success
-      </h1>
-      <a
-        href=""
-        target="_blank"
-        className=" text-font1 lg:mt-6 "
-        rel="noreferrer"
-      >
-        -by BlackBird India
-      </a>
-      </div> */}
-      </div>
+      
     </div>
   );
 }
