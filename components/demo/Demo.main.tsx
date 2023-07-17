@@ -18,6 +18,7 @@ interface DemoProps {
   countryCode: string;
   country: string;
   age: number;
+  course: string;
 }
 
 const Demo = () => {
@@ -25,9 +26,10 @@ const Demo = () => {
     phoneNumber: "",
     emailId: "",
     name: "",
-    countryCode: "",
-    country: "",
+    countryCode: "+91",
+    country: "India",
     age: NaN,
+    course: "",
   });
   const [popup, setPopup] = React.useState(0);
   useEffect(() => {
@@ -51,6 +53,7 @@ const Demo = () => {
           phoneNumber: "",
           country: "",
           age: NaN,
+          course: "",
         });
         setTimeout(() => {
           setPopup(0);
@@ -70,6 +73,7 @@ const Demo = () => {
 
   return (
     <div className="text-slate-700 border shadow-[1px_1px_2px_1px_#d1d1d1] p-4 rounded-lg  bg-white w-1/3 " id="book">
+      
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
           <img src="/RobotGif.gif" className="h-60" />
@@ -90,6 +94,7 @@ const Demo = () => {
             <h1 className=" text-center text-base font-bold ">
               Book a FREE Demo
             </h1>
+            
             
             <div className="p-2 mt-4 space-y-3">
               <Input
@@ -166,12 +171,28 @@ const Demo = () => {
                   });
                 }}
               />
+               <Input
+                type="text"
+                placeholder="Preferred Course"
+                value={demoData.course}
+                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
+                onChange={(e) => {
+                  setDemoData((data) => {
+                    return { ...data, course: e.target.value };
+                  });
+                }}
+              />
+            </div>
+            
+            <div className="w-full flex justify-center">
+
+           
             </div>
             <div className="w-full flex justify-center">
 
 
             <button
-              className=" w-[95%] bg-theme my-4 text-base rounded-md p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100 z-20"
+              className=" w-[95%] bg-[#16CEF7] my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100 z-20"
               disabled={
                 !demoData.emailId || !demoData.name || !demoData.phoneNumber
               }

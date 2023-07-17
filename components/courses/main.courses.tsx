@@ -156,7 +156,7 @@ const Courses = () => {
                 <h2>
                   <AccordionButton
                     
-                    className="rounded-xl  bg-emerald-300"
+                    className="rounded-xl  bg-[#16CEF7]"
                   >
                     <Box
                       as="span"
@@ -182,7 +182,7 @@ const Courses = () => {
                                 <AccordionButton >
                                   <Box as="span" >
                                     
-                                    <div className="text-xl font-semibold">◉ {category.name}</div>
+                                    <h1 className="text-xl font-semibold">◉ {category.name}</h1>
                                   </Box>
                                   
                                 </AccordionButton>
