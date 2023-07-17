@@ -182,7 +182,7 @@ const Courses = () => {
                                 <AccordionButton >
                                   <Box as="span" >
                                     
-                                    <h1 className="text-xl font-semibold">◉ {category.name}</h1>
+                                    <h1 className="lg:text-xl font-semibold">◉ {category.name}</h1>
                                   </Box>
                                   
                                 </AccordionButton>
