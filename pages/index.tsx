@@ -25,8 +25,8 @@ const Home = () => {
             nurture their curiosity , creativity, innovation and immagination to
             shape next generation go Young Innovators.
           </p>{" "}
-          <button className="px-4 py-0.5 bg-[#FF0000] rounded-2xl mx-2 my-2 font-bold border-white border-2 active:opacity-90 active:scale-95">Watch ▶</button>
-          <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl mx-2 my-2 font-bold border-black border-2 text-black active:opacity-90 active:scale-95">Book Demo</button>
+          <button className="px-4 py-0.5 bg-[#FF0000] rounded-2xl mx-3 my-2 font-bold border-white border-2 active:opacity-90 active:scale-95">Watch ▶</button>
+          <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl mx-4 my-2 font-bold border-black border-2 text-black active:opacity-90 active:scale-95">Book Demo</button>
         </div>
       </div>
 

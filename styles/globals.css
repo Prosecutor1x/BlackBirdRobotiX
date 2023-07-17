@@ -150,3 +150,7 @@ video {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
+.horizontal-gradient {
+  background: linear-gradient(to right, #950DC7, #6B70FB, #3BA6F9 ,#24EBF6);
+}
