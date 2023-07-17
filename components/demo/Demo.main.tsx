@@ -160,7 +160,7 @@ const Demo = () => {
                 />
               </InputGroup>
               
-              <Input
+              {/* <Input
                 type="text"
                 placeholder="Email Address"
                 value={demoData.emailId}
@@ -170,7 +170,7 @@ const Demo = () => {
                     return { ...data, emailId: e.target.value };
                   });
                 }}
-              />
+              /> */}
                <Input
                 type="text"
                 placeholder="Preferred Course"
@@ -194,7 +194,7 @@ const Demo = () => {
             <button
               className=" w-[95%] bg-[#16CEF7] my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100 z-20"
               disabled={
-                !demoData.emailId || !demoData.name || !demoData.phoneNumber
+               !demoData.name || !demoData.phoneNumber || !demoData.age || !demoData.course
               }
               onClick={() => addDemo(demoData)}
             >

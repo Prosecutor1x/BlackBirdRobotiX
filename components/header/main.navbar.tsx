@@ -20,7 +20,7 @@ import {
 
 export default function Header() {
   return (
-    <div className="flex bg-transparent  shadow-lg backdrop-blur-lg  justify-center h-20 space-x-16 z-40 absolute top-0  w-screen items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white font-quicksand ">
+    <div className="flex bg-gradient-to-r horizontal-gradient shadow-lg backdrop-blur-lg  justify-center h-20 space-x-16 z-40 fixed top-0  w-screen items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white font-quicksand ">
       <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
         <div className=" flex items-center">
           <a href="#">
@@ -102,11 +102,16 @@ export default function Header() {
               About Us
             </h1>
           </a>
-          <a href="#contactus">
+          <a href="#aboutus">
+            <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
+              Shop
+            </h1>
+          </a>
+          {/* <a href="#contactus">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               Contact Us
             </h1>
-          </a>
+          </a> */}
           <a href="#book">
           <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl  font-bold border-black border-2 text-black active:opacity-90 active:scale-95">Book Demo</button>
           </a>
