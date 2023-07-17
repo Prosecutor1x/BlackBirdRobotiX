@@ -24,10 +24,10 @@ export default function Header() {
       <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
         <div className=" flex items-center">
           <a href="#">
-            <img src="/fl.png" className="h-24" />
+            <img src="/fl.png" className="lg:h-24 w- " />
           </a>
           <a href="#">
-            <img src="/bb.png" className="h-40" />
+            <img src="/bb.png" className="lg:h-40 "  />
           </a>
         </div>
         <div className="hidden lg:flex md:gap-6 items-center">

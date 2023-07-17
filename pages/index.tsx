@@ -13,13 +13,13 @@ const Home = () => {
       <Header />
       <div className="relative">
         <img src="/hero/bg.png" className="w-screen" />
-        <div className="absolute text-white font-quicksand top-1/3 w-1/2 left-20 text-center">
+        <div className="absolute text-white font-quicksand top-1/3 w-1/2 left-20 hidden lg:block text-center">
           {" "}
-          <h1 className="text-2xl leading-tight font-semibold">
+          <h1 className="text-2xl leading-tight font-semibold ">
             Skill Developement Training and Innovative Learning with
             Robotics,AI,Drone and STEM
           </h1>
-          <p className="my-2">
+          <p className="my-2 ">
             Blackbird RobotiX is revolutionizing the way of learning by
             developing 21st-century skills and provides for the students to
             nurture their curiosity , creativity, innovation and immagination to
