@@ -2,22 +2,60 @@ import React from "react";
 import Demo from "../demo/Demo.main";
 import ImageCarouselHero from "./swiper.hero";
 
+const heroCardData = [
+  {
+    text: "Competitions",
+    img: "/hero/comp.png",
+  },
+  {
+    text: "learning Kits",
+    img: "/hero/lkit.png",
+  },
+  {
+    text: "learning Kits",
+    img: "/hero/lkit.png",
+  },
+  {
+    text: "learning Kits",
+    img: "/hero/lkit.png",
+  },
+];
+
 export default function Hero() {
   return (
-    <div className="relative ">
-    
-      <div className="lg:flex  lg:min-h-screen justify-between items-center  lg:px-12 gap-28 bg-[#FAF9F6]">
-        
-        <div className="lg:w-2/3 mt-12 lg:mt-0 p-10 rounded-2xl bg-emerald-100 flex flex-col space-y-4  ">
-          <p className="lg:text-lg  font-semibold text-center leading-2 "> A blog (a truncation of "weblog")[1] is an informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order so that the most recent post appears first, at the top of the web page. Until 2009, blogs were usually the work of a single individual,[citation needed] occasionally of a small group, and often covered a single subject or topic. In the 2010s, "multi-author blogs" (MABs) emerged, featuring the writing of multiple authors and sometimes professionally edited. MABs from newspapers, other media outlets, universities, think tanks, advocacy groups, and similar institutions account for an increasing quantity of blog traffic. The rise of Twitter and other "microblogging" systems helps integrate MABs and single-author blogs into the news media. Blog can also be used as a verb, meaning to maintain or add content to a blog.</p>
-         <a href="#book"><button  className="bg-font2 p-2 w-full rounded-lg text-white font-semibold active:scale-95">Book Now</button></a> 
-        </div>
-        <div className="lg:w-2/5 relative  flex-col justify-center items-center mt-32 lg:mt-0">
-         
-          <ImageCarouselHero />
-        </div>
+    <div className="relative space-y-24 my-12 ">
+      <div className="flex justify-evenly">
+        {heroCardData?.map((item, index) => {
+          return (
+            <div className="rounded-2xl bg-white shadow-[2px_2px_3px_3px_#B0B3BB] ">
+              <img
+                src={item.img}
+                className="rounded-2xl h-[15rem] object-cover"
+              />
+              <h1 className="text-xl font-semibold text-center p-3">{item.text} </h1>
+            </div>
+          );
+        })}
       </div>
-      
+
+      <div className="lg:flex   justify-between  lg:px-12 gap-">
+        <div className="lg:w-1/3    lg:mt-0 p-10 rounded-2xl  flex flex-col space-y-4  ">
+          <p className="lg:text-lg  font-semibold text-justify leading-2  ">
+            {" "}
+            <span className="font-bold">BlackBird RobotiX</span> is an innovative educational ecosystem that is
+            recommended by teachers and embraced by students for its innovative
+            learning and skill development program. Courses are designed for
+            educators of all ages with hi-tech equipment's to cultivate 21st
+            century skills like teamwork, problem-solving ability, creativity,
+            thinking and analysis, innovation, and so on.
+          </p>
+         
+        </div>
+        {/* <div className="lg:w-3/5  relative  flex-col justify-center items-center  lg:mt-0">
+          <ImageCarouselHero />
+        </div> */}
+        <video src="/hero/sample.mp4" autoPlay loop controls  className="w-3/5 rounded-2xl"/>
+      </div>
     </div>
   );
 }
