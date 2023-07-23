@@ -203,7 +203,7 @@ const Courses = () => {
 
         })}
       </>
-      <h1 className="text-center text-2xl text-theme">For any Queries Book a Demo Session or Call/Whatsapp us at +91 8013100878 </h1>
+      <h1 className="text-center lg:text-2xl text-xl text-theme">For any Queries Book a Demo Session or Call/Whatsapp us at +91 8013100878 </h1>
     </div>
   );
 };
