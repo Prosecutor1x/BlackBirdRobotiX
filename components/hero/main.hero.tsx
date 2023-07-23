@@ -8,12 +8,12 @@ const heroCardData = [
     img: "/hero/comp.png",
   },
   {
-    text: "learning Kits",
-    img: "/hero/lkit.png",
+    text: "Events",
+    img: "/hero/event.png",
   },
   {
-    text: "learning Kits",
-    img: "/hero/lkit.png",
+    text: "Workshops",
+    img: "/hero/workshop.png",
   },
   {
     text: "learning Kits",

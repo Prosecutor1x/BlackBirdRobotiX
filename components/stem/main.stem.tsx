@@ -3,35 +3,35 @@ import React from 'react'
 const stemCardData = [
     {
       text: "Scratch Coding",
-      img: "/hero/comp.png",
+      img: "/stem/scr.png",
     },
     {
-      text: "learning Kits",
-      img: "/hero/lkit.png",
+      text: "Mobile App Development",
+      img: "/stem/app.png",
     },
     {
-      text: "learning Kits",
-      img: "/hero/lkit.png",
+      text: "Robotics",
+      img: "/stem/rob.png",
     },
     {
-      text: "learning Kits",
-      img: "/hero/lkit.png",
+      text: "Artificial Intelligence",
+      img: "/stem/ai.png",
     },
     {
-        text: "learning Kits",
-        img: "/hero/lkit.png",
+        text: "Block Programming",
+        img: "/stem/block.png",
       },
       {
-        text: "learning Kits",
-        img: "/hero/lkit.png",
+        text: "Language Programming",
+        img: "/stem/lang.png",
       },
       {
-        text: "learning Kits",
-        img: "/hero/lkit.png",
+        text: "Language Programming",
+        img: "/stem/drone.png",
       },
       {
-        text: "learning Kits",
-        img: "/hero/lkit.png",
+        text: "Combat Robotsx",
+        img: "/stem/cb.png",
       },
   ];
 
@@ -43,10 +43,10 @@ const Stem = () => {
         <section className='grid grid-flow-col lg:col-span-4 col-span-2 lg:grid-rows-2 grid-rows-4 lg:px-12 px-4 py-12 lg:gap-12 gap-4'>
         {stemCardData?.map((item, index) => {
           return (
-            <div className="rounded-2xl bg-white ">
+            <div className="rounded-2xl bg-white flex flex-col justify-center items-center p-2 shadow-lg">
               <img
                 src={item.img}
-                className="rounded-2xl  object-cover"
+                className="rounded-2xl  object-cover lg:h-[16rem] lg:w-[20rem] bg-slate-200 p-4"
               />
               <h1 className="lg:text-xl  font-semibold text-center p-3">{item.text} </h1>
             </div>
