@@ -13,10 +13,13 @@ const Home = () => {
       <Header />
       <div className="relative">
         <img src="/hero/bg.png" className="w-screen" />
-        <img src="/hero/ban.png" className="absolute top-1/4 right-0 h-[24rem] lg:block hidden" />
-        <div className="absolute text-white font-quicksand top-1/3 w-1/2 left-20 hidden lg:block text-center">
+        <img
+          src="/hero/ban.png"
+          className="absolute top-1/4 right-20 h-[24rem] lg:block hidden"
+        />
+        <div className="absolute text-white font-quicksand top-1/4 w-1/2 left-24 hidden lg:block text-center">
           {" "}
-          <h1 className="text-2xl leading-tight font-semibold ">
+          <h1 className="text-3xl  leading-none font-semibold ">
             Skill Developement Training and Innovative Learning with
             Robotics,AI,Drone and STEM
           </h1>
@@ -48,29 +51,35 @@ const Home = () => {
       /> */}
         </div>
         <Stem />
-        <div className="flex lg:flex-row flex-col justify-evenly items-center  ">
-          <div className="flex flex-col justify-center items-center py-12 ">
-            <h1 className="text-2xl font-semibold">
-              Book a <span className="text-3xl">Free Demo </span>Today!
-            </h1>
-            <p className="mb-12 text-lg my-2 lg:text-center">
-              Book a Free Demo Today! Ready to explore the power of Robots, AI,
-              Drones and many more! Book a Free Demo of our Innovative
-              Educational Ecosystem
-            </p>
+        <div className="flex flex-col justify-center items-center" >
+          <h1 className="text-2xl font-semibold">
+            Book a <span className="text-3xl">Free Demo </span>Today!
+          </h1>
+          <p className="mb-12 text-lg my-2 lg:text-center">
+            Book a Free Demo Today! Ready to explore the power of Robots, AI,
+            Drones and many more! Book a Free Demo of our Innovative Educational
+            Ecosystem
+          </p>
+        </div>
+        <div className="flex lg:flex-row flex-col justify-evenly  ">
+          <div className="flex flex-col lg:w-1/2 lg:px-12  ">
             <Demo />
           </div>
-          <div className="flex flex-col justify-center items-center py-12 ">
-            <p className="lg:p-12">
+          <div className="flex flex-col lg:w-1/2 py-4">
+            <p className="">
               Explore the significance and advantages of innovative learning
-              with <span className="font-bold">BlackBird RobotiX</span>. A revolutionary learning ecosystem
-              designed to develop future skills through coding, robotics, AI,
-              drones. <br/>  Our <span className="font-bold"> Education Specialist</span> is here to guide you through the
-              right resources for the educators and assess the educators with
-              their ability and knowledge for best outcome.  <br/> Contact us for a
-              free demonstration.<span className="font-bold italic">Act today to frame a better tomorrow</span> 
+              with <span className="font-bold">BlackBird RobotiX</span>. A
+              revolutionary learning ecosystem designed to develop future skills
+              through coding, robotics, AI, drones. <br /> Our{" "}
+              <span className="font-bold"> Education Specialist</span> is here
+              to guide you through the right resources for the educators and
+              assess the educators with their ability and knowledge for best
+              outcome. <br /> Contact us for a free demonstration.
+              <span className="font-bold italic">
+                Act today to frame a better tomorrow
+              </span>
             </p>
-            <img src="/stem/stm.png"  className="my-4 lg:p-12"/>
+            <img src="/stem/stm.png" className="my-4 lg:p-12" />
           </div>
         </div>
         <Courses />
