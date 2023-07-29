@@ -23,7 +23,7 @@ const heroCardData = [
 
 export default function Hero() {
   return (
-    <div className="relative space-y-24 my-12 ">
+    <div className="relative space-y-8 ">
       <div className="">
    
         <div className=" text-black font-quicksand top-1/3 left-20 lg:hidden text-center">
@@ -46,10 +46,10 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <div className="lg:flex justify-evenly space-y-4 ">
+      <div className="lg:flex justify-evenly lg:p-0 p-12">
         {heroCardData?.map((item, index) => {
           return (
-            <div className="rounded-2xl bg-white shadow-[2px_2px_3px_3px_#B0B3BB] ">
+            <div className="rounded-2xl bg-white shadow-[2px_2px_3px_3px_#B0B3BB] lg:my-0 my-12 ">
               <img
                 src={item.img}
                 className="rounded-2xl lg:h-[15rem]    object-cover"
@@ -62,7 +62,7 @@ export default function Hero() {
         })}
       </div>
 
-      <div className="lg:flex   justify-between  lg:px-12 gap-">
+      <div className="lg:flex   justify-between  lg:px-12 lg:py-24">
         <div className="lg:w-1/3    lg:mt-0 lg:p-10  rounded-2xl  flex flex-col space-y-4  ">
           <p className="lg:text-lg  font-semibold text-justify leading-2 mb-4 ">
             {" "}
