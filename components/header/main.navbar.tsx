@@ -73,12 +73,12 @@ export default function Header() {
               </a>
             </MenuList>
           </Menu>
-          <a href="#contactus">
+          <a href="comingsoon" target="_blank" rel="norefferer">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               Projects
             </h1>
           </a>
-          <Menu>
+          {/* <Menu>
             <MenuButton fontWeight={600} className="anchor-custom">
               School Programs <ChevronDownIcon />
             </MenuButton>
@@ -95,14 +95,19 @@ export default function Header() {
                 <MenuItem>Ages 14+ onwards</MenuItem>
               </a>
             </MenuList>
-          </Menu>
+          </Menu> */}
+          <a href="comingsoon" target="_blank" rel="norefferer">
+            <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
+              School Programs
+            </h1>
+          </a>
 
           <a href="#aboutus">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               About Us
             </h1>
           </a>
-          <a href="#aboutus">
+          <a href="comingsoon" target="_blank" rel="norefferer">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
               Shop
             </h1>

@@ -17,7 +17,7 @@ const heroCardData = [
   },
   {
     text: "learning Kits",
-    img: "/hero/lkit.png",
+    img: "/hero/kit.png",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Hero() {
             <div className="rounded-2xl bg-white shadow-[2px_2px_3px_3px_#B0B3BB] lg:my-0 my-12 ">
               <img
                 src={item.img}
-                className="rounded-2xl lg:h-[15rem]    object-cover"
+                className="rounded-2xl lg:h-[15rem]  lg:w-[17rem]  object-cover"
               />
               <h1 className="text-xl font-semibold text-center p-3">
                 {item.text}{" "}
@@ -79,10 +79,11 @@ export default function Hero() {
           <ImageCarouselHero />
         </div> */}
         <video
-          src="/hero/sample.mp4"
-          autoPlay
-          loop
-          controls
+          src="/hero/vid.mp4"
+          id="watch"
+          autoPlay={true}
+          loop= {true}
+          controls={true}
           className="lg:w-3/5 rounded-2xl"
         />
       </div>
