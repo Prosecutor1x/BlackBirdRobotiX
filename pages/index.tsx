@@ -29,12 +29,16 @@ const Home = () => {
             nurture their curiosity , creativity, innovation and immagination to
             shape next generation go Young Innovators.
           </p>{" "}
-          <button className="px-4 py-0.5 bg-[#FF0000] rounded-2xl mx-3 my-2 font-bold border-white border-2 active:opacity-90 active:scale-95">
-            Watch ▶
-          </button>
-          <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl mx-4 my-2 font-bold border-black border-2 text-black active:opacity-90 active:scale-95">
-            Book Demo
-          </button>
+          <a href="#watch">
+            <button className="px-4 py-0.5 bg-[#FF0000] rounded-2xl mx-3 my-2 font-bold border-white border-2 active:opacity-90 active:scale-95">
+              Watch ▶
+            </button>
+          </a>
+          <a href="#book">
+            <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl mx-4 my-2 font-bold border-black border-2 text-black active:opacity-90 active:scale-95">
+              Book Demo
+            </button>
+          </a>
         </div>
       </div>
 
@@ -51,21 +55,21 @@ const Home = () => {
       /> */}
         </div>
         <Stem />
-        <div className="flex flex-col justify-center items-center" >
-          <h1 className="text-2xl font-semibold">
-            Book a <span className="text-3xl">Free Demo </span>Today!
-          </h1>
-          <p className="mb-12 text-lg my-2 lg:text-center">
-            Book a Free Demo Today! Ready to explore the power of Robots, AI,
-            Drones and many more! Book a Free Demo of our Innovative Educational
-            Ecosystem
-          </p>
-        </div>
-        <div className="flex lg:flex-row flex-col justify-evenly  ">
-          <div className="flex flex-col lg:w-1/2 lg:px-12  ">
+
+        <h1 className="text-2xl font-semibold text-center">
+          Book a <span className="text-3xl">Free Demo </span>Today!
+        </h1>
+        <p className="mb-12 text-lg my-2 lg:text-center">
+          Book a Free Demo Today! Ready to explore the power of Robots, AI,
+          Drones and many more! Book a Free Demo of our Innovative Educational
+          Ecosystem
+        </p>
+
+        <div className="flex lg:flex-row flex-col  items-center w-full gap-24">
+          <div className="lg:w-1/2 lg:px-12  ">
             <Demo />
           </div>
-          <div className="flex flex-col lg:w-1/2 py-4">
+          <div className=" py-4">
             <p className="">
               Explore the significance and advantages of innovative learning
               with <span className="font-bold">BlackBird RobotiX</span>. A

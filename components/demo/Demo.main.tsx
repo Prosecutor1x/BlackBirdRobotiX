@@ -72,7 +72,7 @@ const Demo = () => {
   }
 
   return (
-    <div className="text-slate-700 border shadow-[1px_1px_2px_1px_#d1d1d1] p-4 rounded-lg  bg-white lg:w-2/3 " id="book">
+    <div className="text-slate-700 border shadow-[2px_3px_2px_2px_#16CEF7] p-4 rounded-lg  bg-white " id="book">
       
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
@@ -98,6 +98,7 @@ const Demo = () => {
             
             <div className="p-2 mt-4 space-y-3">
               <Input
+                
                 type="text"
                 placeholder="Enter Child's Name"
                 _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
@@ -107,6 +108,8 @@ const Demo = () => {
                     return { ...data, name: e.target.value };
                   });
                 }}
+                
+                
               />
               <Input
                 type="number"
