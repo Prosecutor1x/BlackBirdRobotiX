@@ -4,15 +4,17 @@ import Courses from "@/components/courses/main.courses";
 import Demo from "@/components/demo/Demo.main";
 import Header from "@/components/header/main.navbar";
 import Hero from "@/components/hero/main.hero";
+import Socials from "@/components/socials/main.socials";
 import Stem from "@/components/stem/main.stem";
 import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-[#E4E5E7] ">
+    <div className="bg-[#E4E5E7] w-screen h-screen ">
       <Header />
+      <Socials/>
       <div className="relative">
-        <img src="/hero/bg.png" className="w-screen" />
+        <img src="/hero/bg.png" className="w-full" />
         <img
           src="/hero/ban.png"
           className="absolute top-1/4 right-20 h-[24rem] lg:block hidden"

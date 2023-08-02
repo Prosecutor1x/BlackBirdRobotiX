@@ -72,20 +72,26 @@ const Demo = () => {
   }
 
   return (
-    <div className="text-slate-700 border shadow-[2px_3px_2px_2px_#16CEF7] p-4 rounded-lg  bg-white " id="book">
-      
+    <div
+      className="text-slate-700 border shadow-[2px_3px_2px_2px_#16CEF7] p-4 rounded-lg  bg-white "
+      id="book"
+    >
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
           <img src="/RobotGif.gif" className="h-60" />
           <h1 className="font-semibold text-xl text-green-500 text-center  my-6">
-            Thank You, Demo Registered Successfully.<br></br><span className="text-base text-center"> We will contact you shorlty and schedule the date and time of demo{" "}</span>
+            Thank You, Demo Registered Successfully.<br></br>
+            <span className="text-base text-center">
+              {" "}
+              We will contact you shorlty and schedule the date and time of demo{" "}
+            </span>
           </h1>
         </div>
       ) : popup == 2 ? (
         <div className="flex justify-center items-center flex-col ">
           <img src="/RobotGif.gif" className="h-60" />
           <h1 className="font-semibold text-xl text-yellow-500  my-6">
-            Already Registered{" "}. Register with opther email id .
+            Already Registered . Register with opther email id .
           </h1>
         </div>
       ) : (
@@ -94,36 +100,31 @@ const Demo = () => {
             <h1 className=" text-center text-base font-bold ">
               Book a FREE Demo
             </h1>
-            
-            
+
             <div className="p-2 mt-4 space-y-3">
               <Input
-                
                 type="text"
                 placeholder="Enter Child's Name"
-                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
+                _placeholder={{ color: "gray.400", fontSize: "15px" }}
                 value={demoData.name}
                 onChange={(e) => {
                   setDemoData((data) => {
                     return { ...data, name: e.target.value };
                   });
                 }}
-                
-                
               />
               <Input
                 type="number"
                 placeholder="Child's Age"
-                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
+                _placeholder={{ color: "gray.400", fontSize: "15px" }}
                 value={demoData.age}
                 onChange={(e) => {
-                  setDemoData((data :any) => {
+                  setDemoData((data: any) => {
                     return { ...data, age: e.target.value };
                   });
                 }}
               />
               <Select
-         
                 onChange={(e: any) =>
                   setDemoData((data) => {
                     return { ...data, country: e.target.value };
@@ -131,9 +132,7 @@ const Demo = () => {
                 }
                 value={demoData.country}
                 backgroundColor={"#FBFAFF"}
-                
                 placeholder="Select Country"
-            
               >
                 {countries.map((c, i) => {
                   return (
@@ -148,7 +147,7 @@ const Demo = () => {
                 <Input
                   type="tel"
                   placeholder="Mobile Number(Whatsapp Only)"
-                  _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
+                  _placeholder={{ color: "gray.400", fontSize: "15px" }}
                   value={demoData.phoneNumber.slice(
                     demoData.countryCode.length
                   )}
@@ -162,7 +161,7 @@ const Demo = () => {
                   }}
                 />
               </InputGroup>
-              
+
               {/* <Input
                 type="text"
                 placeholder="Email Address"
@@ -174,11 +173,11 @@ const Demo = () => {
                   });
                 }}
               /> */}
-               <Input
+              <Input
                 type="text"
                 placeholder="Preferred Course"
                 value={demoData.course}
-                _placeholder={{ color: "gray.400" ,fontSize:"15px"}}
+                _placeholder={{ color: "gray.400", fontSize: "15px" }}
                 onChange={(e) => {
                   setDemoData((data) => {
                     return { ...data, course: e.target.value };
@@ -186,25 +185,23 @@ const Demo = () => {
                 }}
               />
             </div>
-            
-            <div className="w-full flex justify-center">
 
-           
+            <div className="w-full flex justify-center"></div>
+            <div className="w-full flex justify-center">
+              <button
+                className=" w-[95%] bg-[#16CEF7] my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100 z-20"
+                disabled={
+                  !demoData.name ||
+                  !demoData.phoneNumber ||
+                  !demoData.age ||
+                  !demoData.course
+                }
+                onClick={() => addDemo(demoData)}
+              >
+                Book
+              </button>
             </div>
-            <div className="w-full flex justify-center">
-
-
-            <button
-              className=" w-[95%] bg-[#16CEF7] my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:active:scale-100 z-20"
-              disabled={
-               !demoData.name || !demoData.phoneNumber || !demoData.age || !demoData.course
-              }
-              onClick={() => addDemo(demoData)}
-            >
-              Book
-            </button>
           </div>
-            </div>
         </div>
       )}
     </div>
