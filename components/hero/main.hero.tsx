@@ -23,7 +23,7 @@ const heroCardData = [
 
 export default function Hero() {
   return (
-    <div className="relative space-y-8 ">
+    <div className="relative space-y-8 py-1">
       <div className="">
    
         <div className=" text-black font-quicksand top-1/3 left-20 lg:hidden text-center">
