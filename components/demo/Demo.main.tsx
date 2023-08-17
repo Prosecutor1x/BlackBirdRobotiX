@@ -42,7 +42,7 @@ const Demo = () => {
 
   async function addDemo(demodata: DemoProps) {
     if (demodata) {
-      const demoRef = doc(db, "demo", demodata.emailId);
+      const demoRef = doc(db, "demo", demodata.phoneNumber);
       const demoSnap = await getDoc(demoRef);
       if (demoSnap.exists()) {
         setPopup(2);
@@ -74,7 +74,7 @@ const Demo = () => {
   return (
     <div
       className="text-slate-700 border shadow-[2px_3px_2px_2px_#16CEF7] p-4 rounded-lg  bg-white "
-      id="book"
+      
     >
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
