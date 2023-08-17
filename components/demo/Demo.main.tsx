@@ -74,7 +74,7 @@ const Demo = () => {
   return (
     <div
       className="text-slate-700 border shadow-[2px_3px_2px_2px_#16CEF7] p-4 rounded-lg  bg-white "
-      id="book"
+      
     >
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
@@ -162,7 +162,7 @@ const Demo = () => {
                 />
               </InputGroup>
 
-              {/* <Input
+              <Input
                 type="text"
                 placeholder="Email Address"
                 value={demoData.emailId}
@@ -172,7 +172,7 @@ const Demo = () => {
                     return { ...data, emailId: e.target.value };
                   });
                 }}
-              /> */}
+              />
               <Input
                 type="text"
                 placeholder="Preferred Course"
