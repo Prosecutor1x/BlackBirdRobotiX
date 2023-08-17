@@ -42,7 +42,7 @@ const Demo = () => {
 
   async function addDemo(demodata: DemoProps) {
     if (demodata) {
-      const demoRef = doc(db, "demo", demodata.emailId);
+      const demoRef = doc(db, "demo", demodata.phoneNumber);
       const demoSnap = await getDoc(demoRef);
       if (demoSnap.exists()) {
         setPopup(2);
@@ -162,7 +162,7 @@ const Demo = () => {
                 />
               </InputGroup>
 
-              <Input
+              {/* <Input
                 type="text"
                 placeholder="Email Address"
                 value={demoData.emailId}
@@ -172,7 +172,7 @@ const Demo = () => {
                     return { ...data, emailId: e.target.value };
                   });
                 }}
-              />
+              /> */}
               <Input
                 type="text"
                 placeholder="Preferred Course"
