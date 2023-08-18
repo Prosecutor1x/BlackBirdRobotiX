@@ -42,7 +42,7 @@ const Demo = () => {
 
   async function addDemo(demodata: DemoProps) {
     if (demodata) {
-      const demoRef = doc(db, "demo", demodata.emailId);
+      const demoRef = doc(db, "demo", demodata.phoneNumber);
       const demoSnap = await getDoc(demoRef);
       if (demoSnap.exists()) {
         setPopup(2);
@@ -91,7 +91,7 @@ const Demo = () => {
         <div className="flex justify-center items-center flex-col ">
           <img src="/RobotGif.gif" className="h-60" />
           <h1 className="font-semibold text-xl text-yellow-500  my-6">
-            Already Registered . Register with opther email id .
+            Already Registered . Register with other phone number.
           </h1>
         </div>
       ) : (
