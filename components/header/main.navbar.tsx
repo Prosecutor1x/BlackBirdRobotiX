@@ -23,10 +23,10 @@ export default function Header() {
     <div className="flex bg-gradient-to-r horizontal-gradient shadow-lg backdrop-blur-lg  justify-center h-20 space-x-16 z-40 fixed top-0  w-screen items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white font-quicksand ">
       <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
         <div className=" flex items-center">
-          <a href="#">
+          <a href="/">
             <img src="/fl.png" className="lg:h-24 w- " />
           </a>
-          <a href="#">
+          <a href="/">
             <img src="/bb.png" className="lg:h-40 "  />
           </a>
         </div>
