@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,7 @@
 body {
   overflow-x: hidden;
   width: 100%;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html {
@@ -27,4 +30,127 @@ video {
   .input-primary {
     @apply bg-grey px-6 py-2 focus:outline-none textfont1 font-light rounded-md;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #212121;
+}
+
+.swiper-pagination {
+  //display:flex;
+  position: unset !important;
+  //justify-items:flex-start !important ;
+  //align-items:flex-start !important ;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  //margin-left:8rem;
+}
+
+.swiper-pagination-bullet-active {
+  background-image: linear-gradient(
+    to right,
+    #045b63 0%,
+    #045b63 100%
+  ) !important;
+  /* border: 2px solid rgb(255, 255, 255) !important; */
+}
+
+.swiper-pagination-bullet {
+  background-color: #d1d1fd !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.swiper-slide,
+.swiper-slide-active {
+  display: grid !important;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+   /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.typewriter3 h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+   /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+.typewriter2 h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+   /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+.horizontal-gradient {
+  background: linear-gradient(to right, #950DC7, #6B70FB, #3BA6F9 ,#24EBF6);
 }
