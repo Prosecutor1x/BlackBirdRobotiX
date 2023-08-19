@@ -1,35 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-function Hero() {
+function HeroEvents() {
   return (
-    <div className=' mt-20 mx-64 '>
-      <div className='flex gap-16'>
-
-        <img src="/events/scratch1.png" className='w-4/12 h-4/12' />
-        <h1 className=' font-extrabold text-7xl mt-32 text-[#EDA822] '>Contest 2023</h1>
+    <div className="w-full flex flex-col justify-center items-center ">
+      <div className="flex justify-around mt-24">
+        <img src="/events/scratch1.png" className="w-2/6 " />
+        <h1 className=" font-extrabold text-[80px] mt-32 text-[#EDA822] strokeme">
+          Contest 2023
+        </h1>
+        
       </div>
-      <p className=' text-[#EDA822] text-2xl font-bold text-center flex justify-center'>Open for all Scratch Programming Contest</p>
-      <div className='flex mt-20 space-x-16'>
-        <div className=''>
+      <p className=" text-[#EDA822] text-4xl font-bold text-center my-12 strokeme">
+        <span className='text-purple-600'>Open for all</span> <span className='text-orange-400'>&nbsp; SCRATCH </span> <span className='text-[#dcdcdb]'> &nbsp; PROGRAMMING</span> <span className='text-green-500'>&nbsp; CONTEST</span>
+      </p>
+      <div className="flex justify-center gap-12 items-center">
+        <div className="text-center text-[#EDA822] strokeme">
+          <p className=" text-3xl -my-1 font-semibold ">
+            Cheers! Scratch Contest 2023 is live again 
+          </p>
 
-          <p className='text-[#EDA822] text-2xl -my-1 '>Cheers! Scratch Contest 2023 is live again ,</p>
-         
-
-          <p className='text-[#950DC7] text-3xl -my-1  font-bold'>TOPIC - Tree Plantation </p>
-          <p className='text-[#2FF737] text-2xl -my-1  font-bold'>Resister Now!!</p>
+          <p className=" text-4xl -my-1  font-bold">
+            TOPIC - Tree Plantation{' '}
+          </p>
+          <p className="text-3xl -my-1  font-semibold">
+            Resister Now!!
+          </p>
         </div>
-        <img src="/events/pile.png" className='w-5/12 h-5/12' />
-
-
-
+        <img src="/events/pile.png" className="w-1/3" />
       </div>
-
-
-
-
-
     </div>
-  )
+  );
 }
 
-export default Hero
+export default HeroEvents;

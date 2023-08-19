@@ -58,7 +58,7 @@ const Home = () => {
         </div>
         <Stem />
 
-        <h1 className="text-2xl font-semibold text-center">
+        <h1 className="text-2xl font-semibold text-center" id="book">
           Book a <span className="text-3xl">Free Demo </span>Today!
         </h1>
         <p className="mb-12 text-lg my-2 lg:text-center">
@@ -67,7 +67,7 @@ const Home = () => {
           Ecosystem
         </p>
 
-        <div className="flex lg:flex-row flex-col  items-center w-full gap-24">
+        <div className="flex lg:flex-row flex-col  items-center w-full gap-24" >
           <div className="lg:w-1/2 lg:px-12  ">
             <Demo />
           </div>

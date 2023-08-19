@@ -53,13 +53,12 @@ video {
 }
 
 .swiper-pagination {
-  //display:flex;
+  
   position: unset !important;
-  //justify-items:flex-start !important ;
-  //align-items:flex-start !important ;
+ 
   margin-top: 1rem;
   margin-bottom: 1rem;
-  //margin-left:8rem;
+  
 }
 
 .swiper-pagination-bullet-active {
@@ -153,4 +152,10 @@ video {
 
 .horizontal-gradient {
   background: linear-gradient(to right, #950DC7, #6B70FB, #3BA6F9 ,#24EBF6);
+}
+.horizontal-gradient2 {
+  background: linear-gradient(to right, #c73b0d, #eb882b, #f9bf78 ,#f7e89e);
+}
+.strokeme {
+  text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF;
 }
