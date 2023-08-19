@@ -13,6 +13,7 @@ import { countryCodes } from '@/database/CountryCodes';
 import { FileUploader } from 'react-drag-drop-files';
 import { getDownloadURL, getStorage, ref } from 'firebase/storage';
 import { uploadSB3File } from '@/functions/addFile';
+import TimeRemaining from '../shared/timeremainning';
 
 interface RegisterProps {
   phoneNumber: string;
@@ -37,21 +38,50 @@ const Register = () => {
     institution: ''
   });
   const [popup, setPopup] = React.useState(0);
+  const [uploadname, setUploadname] = useState<string>('');
+  const [uploadStatus, setUploadStatus] = useState<string>('not-uploaded');
   const fileTypes = ['SB3'];
+  const targetDate = '2023-08-31T23:59:59'
+  const [disable,setDisable]=useState<boolean>(false)
+  
+
 
   const [file, setFile] = useState(null);
+
+  const handledisable=()=>{
+    const now = new Date();
+    const target = new Date(targetDate)
+    const timeDifference = target.getTime() - now.getTime()
+    if(timeDifference > 0){
+      setDisable(true)
+    }else if(timeDifference < -86400000){
+      setDisable(true)
+    }else{
+      setDisable(false)
+    }
+    
+  
+  }
+
 
   const handleChange = (file: any) => {
     setFile(file);
     const sb3File: File = file;
-    const username: string = RegisterData.name;
-    uploadSB3File(sb3File, username)
-      .then(() => {
-        console.log('File upload completed');
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+    const username: string = uploadname;
+    if (username) {
+      uploadSB3File(sb3File, username)
+        .then(() => {
+          console.log('File upload completed');
+          setUploadStatus('uploaded');
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          setUploadStatus('failed');
+        });
+    } else {
+      console.error('Username is missing.');
+      setUploadStatus('missing-username');
+    }
   };
 
   useEffect(() => {
@@ -62,6 +92,7 @@ const Register = () => {
       setRegisterData(data => {
         return { ...data, countryCode: tempCode.dial_code };
       });
+    handledisable()
   }, [RegisterData.country]);
 
   async function addRegister(Registerdata: RegisterProps) {
@@ -239,17 +270,58 @@ const Register = () => {
           </p>
         </div>
       </div>
-      <div className="h-1/6 bg-[#EDA822] rounded-full ">
-        <h1 className="text-white text-4xl font-bold text-center pt-12">
-          STEPS
-        </h1>
-        <div className="flex justify-center items-center p-12 gap-24">
-          <img src="/events/steps.png" className="w-1/2" />
-          <div className="h-32 bg-white flex justify-center items-center p-12 rounded-full ">
+      <div className="h-1/6 bg-[#EDA822] rounded-xl py-12 ">
+        <h1 className="text-white text-4xl font-bold text-center ">STEPS</h1>
+        <TimeRemaining targetDate={targetDate} />
+        <div className="flex justify-evenly items-center ">
+          <img src="/events/steps.png" className="w-1/3" />
+
+          <div className="h-[16rem] bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
+                    
+            {uploadStatus == 'uploaded' || uploadStatus == 'failed' ? null : (
+              <>
+                <Input
+                  placeholder="Enter your name"
+                  focusBorderColor="orange.500"
+                  type="text"
+                  value={uploadname}
+                  onChange={e => setUploadname(e.target.value)}
+                />
+              </>
+            )}
+
             <FileUploader
               handleChange={handleChange}
               name="file"
               types={fileTypes}
+              disabled={disable}
+              children={
+                <>
+                  {uploadStatus == 'uploaded' ? (
+                    <p className="text-center text-xl font-semibold text-green-500">
+                      File Uploaded Successfully
+                    </p>
+                  ) : uploadStatus == 'failed' ? (
+                    <p className="text-center text-xl font-semibold text-red-500">
+                      File Upload Failed
+                    </p>
+                  ) : uploadStatus == 'missing-username' ? (
+                    <p className="text-center text-xl font-semibold text-red-500">
+                      Please Enter a Valid Name and Click here again
+                    </p>
+                  ) : (
+                    <div className="flex flex-col justify-center items-center gap-2 text-black space-y-2 border-dotted border-2 border-red-800  p-8 rounded-xl">
+                      <p className="text-center text-xl font-semibold  ">
+                        Upload your SB3 file here
+                      </p>
+
+                      <p className="text-center text-sm font-semibold bg-red-300 rounded-full p-4 active:scale-90 ">
+                        Click or Drag and Drop
+                      </p>
+                    </div>
+                  )}
+                </>
+              }
             />
           </div>
         </div>

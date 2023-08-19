@@ -9,6 +9,6 @@ export async function uploadSB3File(file: File, username: string): Promise<void>
         console.log('File uploaded successfully');
     } catch (error) {
         console.error('Error uploading file:', error);
-        throw new Error('Failed to upload file.');
+        //throw new Error('Failed to upload file.');
     }
 }
