@@ -49,11 +49,11 @@ export default function Header() {
             </h1>
           </Link> */}
 
-          {/* <a href="">
+          <a href="/events">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
-              Events
+              Events ⭐
             </h1>
-          </a> */}
+          </a>
 
           <Menu>
             <MenuButton fontWeight={600} className="anchor-custom">
