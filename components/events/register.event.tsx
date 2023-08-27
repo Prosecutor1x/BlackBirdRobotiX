@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   Input,
   InputGroup,
   InputLeftAddon,
   InputRightAddon,
-  Select
-} from '@chakra-ui/react';
-import { doc, getDoc, setDoc } from 'firebase/firestore';
-import { db } from '@/lib/firebaseConfig';
-import countries from '@/database/countries';
-import { countryCodes } from '@/database/CountryCodes';
-import { FileUploader } from 'react-drag-drop-files';
-import { getDownloadURL, getStorage, ref } from 'firebase/storage';
-import { uploadSB3File } from '@/functions/addFile';
-import TimeRemaining from '../shared/timeremainning';
+  Select,
+} from "@chakra-ui/react";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "@/lib/firebaseConfig";
+import countries from "@/database/countries";
+import { countryCodes } from "@/database/CountryCodes";
+import { FileUploader } from "react-drag-drop-files";
+import { getDownloadURL, getStorage, ref } from "firebase/storage";
+import { uploadSB3File } from "@/functions/addFile";
+import TimeRemaining from "../shared/timeremainning";
 
 interface RegisterProps {
   phoneNumber: string;
@@ -28,41 +28,36 @@ interface RegisterProps {
 
 const Register = () => {
   const [RegisterData, setRegisterData] = useState<RegisterProps>({
-    phoneNumber: '',
+    phoneNumber: "",
     // emailId: "",
-    name: '',
-    countryCode: '+91',
-    country: 'India',
+    name: "",
+    countryCode: "+91",
+    country: "India",
     // age: NaN,
     // course: "",
-    institution: ''
+    institution: "",
   });
   const [popup, setPopup] = React.useState(0);
-  const [uploadname, setUploadname] = useState<string>('');
-  const [uploadStatus, setUploadStatus] = useState<string>('not-uploaded');
-  const fileTypes = ['SB3'];
-  const targetDate = '2023-08-31T23:59:59'
-  const [disable,setDisable]=useState<boolean>(false)
-  
-
+  const [uploadname, setUploadname] = useState<string>("");
+  const [uploadStatus, setUploadStatus] = useState<string>("not-uploaded");
+  const fileTypes = ["SB3"];
+  const targetDate = "2023-08-31T23:59:59";
+  const [disable, setDisable] = useState<boolean>(false);
 
   const [file, setFile] = useState(null);
 
-  const handledisable=()=>{
+  const handledisable = () => {
     const now = new Date();
-    const target = new Date(targetDate)
-    const timeDifference = target.getTime() - now.getTime()
-    if(timeDifference > 0){
-      setDisable(true)
-    }else if(timeDifference < -86400000){
-      setDisable(true)
-    }else{
-      setDisable(false)
+    const target = new Date(targetDate);
+    const timeDifference = target.getTime() - now.getTime();
+    if (timeDifference > 0) {
+      setDisable(true);
+    } else if (timeDifference < -86400000) {
+      setDisable(true);
+    } else {
+      setDisable(false);
     }
-    
-  
-  }
-
+  };
 
   const handleChange = (file: any) => {
     setFile(file);
@@ -71,45 +66,45 @@ const Register = () => {
     if (username) {
       uploadSB3File(sb3File, username)
         .then(() => {
-          console.log('File upload completed');
-          setUploadStatus('uploaded');
+          console.log("File upload completed");
+          setUploadStatus("uploaded");
         })
-        .catch(error => {
-          console.error('Error:', error);
-          setUploadStatus('failed');
+        .catch((error) => {
+          console.error("Error:", error);
+          setUploadStatus("failed");
         });
     } else {
-      console.error('Username is missing.');
-      setUploadStatus('missing-username');
+      console.error("Username is missing.");
+      setUploadStatus("missing-username");
     }
   };
 
   useEffect(() => {
     const tempCode = countryCodes.find(
-      data => data.name == RegisterData.country
+      (data) => data.name == RegisterData.country,
     );
     tempCode &&
-      setRegisterData(data => {
+      setRegisterData((data) => {
         return { ...data, countryCode: tempCode.dial_code };
       });
-    handledisable()
+    handledisable();
   }, [RegisterData.country]);
 
   async function addRegister(Registerdata: RegisterProps) {
     if (Registerdata) {
-      const RegisterRef = doc(db, 'register', Registerdata.phoneNumber);
+      const RegisterRef = doc(db, "register", Registerdata.phoneNumber);
       const RegisterSnap = await getDoc(RegisterRef);
       if (RegisterSnap.exists()) {
         setPopup(2);
         setRegisterData({
-          name: '',
+          name: "",
           // emailId: "",
-          countryCode: '',
-          phoneNumber: '',
-          country: '',
+          countryCode: "",
+          phoneNumber: "",
+          country: "",
           // age: NaN,
           // course: "",
-          institution: ''
+          institution: "",
         });
         setTimeout(() => {
           setPopup(0);
@@ -123,7 +118,7 @@ const Register = () => {
         }
       }
     } else {
-      console.log('No value entered');
+      console.log("No value entered");
     }
   }
 
@@ -156,10 +151,10 @@ const Register = () => {
                   <Input
                     type="text"
                     placeholder="Enter  Name"
-                    _placeholder={{ color: '#EDA822', fontSize: '15px' }}
+                    _placeholder={{ color: "#EDA822", fontSize: "15px" }}
                     value={RegisterData.name}
-                    onChange={e => {
-                      setRegisterData(data => {
+                    onChange={(e) => {
+                      setRegisterData((data) => {
                         return { ...data, name: e.target.value };
                       });
                     }}
@@ -177,12 +172,12 @@ const Register = () => {
                                 /> */}
                   <Select
                     onChange={(e: any) =>
-                      setRegisterData(data => {
+                      setRegisterData((data) => {
                         return { ...data, country: e.target.value };
                       })
                     }
                     value={RegisterData.country}
-                    backgroundColor={'#FBFAFF'}
+                    backgroundColor={"#FBFAFF"}
                     placeholder="Select Country"
                   >
                     {countries.map((c, i) => {
@@ -198,16 +193,16 @@ const Register = () => {
                     <Input
                       type="tel"
                       placeholder="Mobile Number(Whatsapp Only)"
-                      _placeholder={{ color: '#EDA822', fontSize: '15px' }}
+                      _placeholder={{ color: "#EDA822", fontSize: "15px" }}
                       value={RegisterData.phoneNumber.slice(
-                        RegisterData.countryCode.length
+                        RegisterData.countryCode.length,
                       )}
-                      onChange={e => {
-                        setRegisterData(data => {
+                      onChange={(e) => {
+                        setRegisterData((data) => {
                           return {
                             ...data,
                             phoneNumber:
-                              RegisterData.countryCode + e.target.value
+                              RegisterData.countryCode + e.target.value,
                           };
                         });
                       }}
@@ -218,9 +213,9 @@ const Register = () => {
                     type="text"
                     placeholder="Institute Name"
                     value={RegisterData.institution}
-                    _placeholder={{ color: '#EDA822', fontSize: '15px' }}
-                    onChange={e => {
-                      setRegisterData(data => {
+                    _placeholder={{ color: "#EDA822", fontSize: "15px" }}
+                    onChange={(e) => {
+                      setRegisterData((data) => {
                         return { ...data, institution: e.target.value };
                       });
                     }}
@@ -263,7 +258,7 @@ const Register = () => {
             innovative skills.
           </p>
           <p className="   mt-2">
-            {' '}
+            {" "}
             Scratch is free programming environments designed to engage students
             in creative learning experience. The Scratch contest is not
             affiliated with scratch or scratch foundation.
@@ -277,15 +272,14 @@ const Register = () => {
           <img src="/events/steps.png" className="w-1/3" />
 
           <div className="h-[16rem] bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
-                    
-            {uploadStatus == 'uploaded' || uploadStatus == 'failed' ? null : (
+            {uploadStatus == "uploaded" || uploadStatus == "failed" ? null : (
               <>
                 <Input
                   placeholder="Enter your name"
                   focusBorderColor="orange.500"
                   type="text"
                   value={uploadname}
-                  onChange={e => setUploadname(e.target.value)}
+                  onChange={(e) => setUploadname(e.target.value)}
                 />
               </>
             )}
@@ -297,15 +291,15 @@ const Register = () => {
               disabled={disable}
               children={
                 <>
-                  {uploadStatus == 'uploaded' ? (
+                  {uploadStatus == "uploaded" ? (
                     <p className="text-center text-xl font-semibold text-green-500">
                       File Uploaded Successfully
                     </p>
-                  ) : uploadStatus == 'failed' ? (
+                  ) : uploadStatus == "failed" ? (
                     <p className="text-center text-xl font-semibold text-red-500">
                       File Upload Failed
                     </p>
-                  ) : uploadStatus == 'missing-username' ? (
+                  ) : uploadStatus == "missing-username" ? (
                     <p className="text-center text-xl font-semibold text-red-500">
                       Please Enter a Valid Name and Click here again
                     </p>

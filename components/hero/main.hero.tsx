@@ -25,7 +25,6 @@ export default function Hero() {
   return (
     <div className="relative space-y-8 py-1">
       <div className="">
-   
         <div className=" text-black font-quicksand top-1/3 left-20 lg:hidden text-center">
           {" "}
           <h1 className="text-2xl leading-tight font-semibold ">
@@ -82,7 +81,7 @@ export default function Hero() {
           src="/hero/vid.mp4"
           id="watch"
           autoPlay={true}
-          loop= {true}
+          loop={true}
           controls={true}
           className="lg:w-3/5 rounded-2xl"
         />
