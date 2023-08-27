@@ -33,12 +33,9 @@ module.exports = {
         "2xl": "1370px",
       },
       colors: {
-        
         theme: "#045b63",
         font2: "#44476A",
         font1: "#045b63",
-       
-       
       },
     },
   },

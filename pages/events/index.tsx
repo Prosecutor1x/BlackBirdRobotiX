@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import Header from '@/components/header/main.navbar';
-import Hero from '@/components/events/hero.events';
-import Demo from '@/components/events/register.event';
-import HeroEvents from '@/components/events/hero.events';
-import Register from '@/components/events/register.event';
+import React, { useState } from "react";
+import Header from "@/components/header/main.navbar";
+import Hero from "@/components/events/hero.events";
+import Demo from "@/components/events/register.event";
+import HeroEvents from "@/components/events/hero.events";
+import Register from "@/components/events/register.event";
 
 type Props = {};
 

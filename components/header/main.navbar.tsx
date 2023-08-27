@@ -27,7 +27,7 @@ export default function Header() {
             <img src="/fl.png" className="lg:h-24 w- " />
           </a>
           <a href="/">
-            <img src="/bb.png" className="lg:h-40 "  />
+            <img src="/bb.png" className="lg:h-40 " />
           </a>
         </div>
         <div className="hidden lg:flex md:gap-6 items-center">
@@ -118,7 +118,9 @@ export default function Header() {
             </h1>
           </a> */}
           <a href="#book">
-          <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl  font-bold border-black border-2 text-black active:opacity-90 active:scale-95">Book Demo</button>
+            <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl  font-bold border-black border-2 text-black active:opacity-90 active:scale-95">
+              Book Demo
+            </button>
           </a>
         </div>
       </div>

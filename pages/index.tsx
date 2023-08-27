@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className="bg-[#E4E5E7] w-screen h-screen ">
       <Header />
-      <Socials/>
+      <Socials />
       <div className="relative">
         <img src="/hero/bg.png" className="w-full" />
         <img
@@ -67,7 +67,7 @@ const Home = () => {
           Ecosystem
         </p>
 
-        <div className="flex lg:flex-row flex-col  items-center w-full gap-24" >
+        <div className="flex lg:flex-row flex-col  items-center w-full gap-24">
           <div className="lg:w-1/2 lg:px-12  ">
             <Demo />
           </div>

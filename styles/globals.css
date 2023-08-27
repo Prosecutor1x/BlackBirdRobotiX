@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +7,7 @@
 body {
   overflow-x: hidden;
   width: 100%;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 html {
@@ -18,12 +18,12 @@ video {
   background: white;
 }
 
- @layer components {
+@layer components {
   .btn-primary {
-    @apply bg-gradient-to-tr from-[#023f52e1] via-[#0d3c88] to-[#033f47] hidden lg:text-sm px-4 lg:p-2 lg:px-10 rounded-3xl border-2 active:scale-95 ; 
+    @apply bg-gradient-to-tr from-[#023f52e1] via-[#0d3c88] to-[#033f47] hidden lg:text-sm px-4 lg:p-2 lg:px-10 rounded-3xl border-2 active:scale-95;
   }
 
-  .anchor-custom{
+  .anchor-custom {
     @apply hover:underline underline-offset-4 text-white text-base;
   }
 
@@ -31,7 +31,6 @@ video {
     @apply bg-grey px-6 py-2 focus:outline-none textfont1 font-light rounded-md;
   }
 }
-
 
 ::-webkit-scrollbar {
   width: 5px;
@@ -53,12 +52,10 @@ video {
 }
 
 .swiper-pagination {
-  
   position: unset !important;
- 
+
   margin-top: 1rem;
   margin-bottom: 1rem;
-  
 }
 
 .swiper-pagination-bullet-active {
@@ -85,77 +82,108 @@ video {
 }
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* The typwriter cursor */
+  /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   /* Adjust as needed */
-  animation: 
+  animation:
     typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 .typewriter3 h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* The typwriter cursor */
+  /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   /* Adjust as needed */
-  animation: 
+  animation:
     typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 .typewriter2 h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-   /* The typwriter cursor */
+  /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   /* Adjust as needed */
-  animation: 
+  animation:
     typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 .horizontal-gradient {
-  background: linear-gradient(to right, #950DC7, #6B70FB, #3BA6F9 ,#24EBF6);
+  background: linear-gradient(to right, #950dc7, #6b70fb, #3ba6f9, #24ebf6);
 }
 .horizontal-gradient2 {
-  background: linear-gradient(to right, #c73b0d, #eb882b, #f9bf78 ,#f7e89e);
+  background: linear-gradient(to right, #c73b0d, #eb882b, #f9bf78, #f7e89e);
 }
 .strokeme {
-  text-shadow: -2px -2px 0 #FFF, 2px -2px 0 #FFF, -2px 2px 0 #FFF, 2px 2px 0 #FFF;
+  text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff;
 }
