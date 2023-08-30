@@ -67,7 +67,7 @@ function Judge({}: Props) {
                   <a href={judge.twitter} target="_blank" rel="norefferer">
                     <AiFillTwitterSquare size={30} />
                   </a>
-                  <a href={judge.twitter} target="_blank" rel="norefferer">
+                  <a href={judge.instagram} target="_blank" rel="norefferer">
                     <AiFillLinkedin size={30} />
                   </a>
                 </div>

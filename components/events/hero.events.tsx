@@ -9,11 +9,11 @@ function HeroEvents() {
           Contest 2023
         </h1>
       </div>
-      <p className=" text-[#EDA822] text-4xl font-bold text-center my-12 strokeme">
-        <span className="text-purple-600">Open for all</span>{" "}
-        <span className="text-orange-400">&nbsp; SCRATCH </span>{" "}
-        <span className="text-[#dcdcdb]"> &nbsp; PROGRAMMING</span>{" "}
-        <span className="text-green-500">&nbsp; CONTEST</span>
+      <p className=" text-[#EDA822] text-4xl font-bold text-center my-12 ">
+        <span className="text-purple-600 strokeme">Open for all</span>{" "}
+        <span className="text-orange-400 strokeme">&nbsp; SCRATCH </span>{" "}
+        <span className="text-white"> &nbsp; PROGRAMMING</span>{" "}
+        <span className="text-green-500 strokeme">&nbsp; CONTEST</span>
       </p>
       <div className="flex justify-center gap-12 items-center">
         <div className="text-center text-[#EDA822] strokeme">
@@ -21,7 +21,9 @@ function HeroEvents() {
             Cheers! Scratch Contest 2023 is live again
           </p>
 
-          <p className=" text-4xl -my-1  font-bold">TOPIC - Tree Plantation </p>
+          <p className=" text-4xl -my-1  font-bold">
+            TOPIC - <span className="text-green-600">Tree Plantation</span>{" "}
+          </p>
           <p className="text-3xl -my-1  font-semibold">Resister Now!!</p>
         </div>
         <img src="/events/pile.png" className="w-1/3" />

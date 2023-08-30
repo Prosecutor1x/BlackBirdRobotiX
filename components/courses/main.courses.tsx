@@ -156,7 +156,6 @@ const data = [
   },
 ];
 
-console.log(CoursesData);
 const Courses = () => {
   return (
     <div

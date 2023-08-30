@@ -2,9 +2,19 @@ import { useEffect, useState } from "react";
 
 interface TimeRemainingProps {
   targetDate: string;
+  timeuptext?: string;
+  timetext?: string;
+  timenowtext?: string;
+  textcolor?: string;
 }
 
-const TimeRemaining: React.FC<TimeRemainingProps> = ({ targetDate }) => {
+const TimeRemaining: React.FC<TimeRemainingProps> = ({
+  targetDate,
+  timenowtext,
+  timetext,
+  timeuptext,
+  textcolor,
+}) => {
   const [timeRemaining, setTimeRemaining] = useState({
     days: 0,
     hours: 0,
@@ -40,19 +50,20 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    <div className="flex justify-center mb-6 gap-2  text-2xl font-quicksand font-semibold text-white">
+    <div
+      className={`flex justify-center mb-6 gap-2  text-2xl font-quicksand font-semibold text-${textcolor}`}
+    >
       {timeDiff < -86400000 ? (
-        <p>Time Up! Submission Closed</p>
+        <p> {timeuptext}</p>
       ) : timeDiff < 0 ? (
-        <p>Upload Now!</p>
+        <p> {timenowtext}</p>
       ) : (
         <>
-          <p>Time Remaining:</p>
-          <p>{timeRemaining.days} days</p>
-          <p>{timeRemaining.hours} hours</p>
-          <p>{timeRemaining.minutes} minutes</p>
-          <p>{timeRemaining.seconds} seconds</p>
-          <p>To Open Submission</p>
+          <p>{timetext}</p>
+          <p>{timeRemaining?.days} days</p>
+          <p>{timeRemaining?.hours} hours</p>
+          {/* <p>{timeRemaining.minutes} minutes</p>
+          <p>{timeRemaining.seconds} seconds</p> */}
         </>
       )}
     </div>
