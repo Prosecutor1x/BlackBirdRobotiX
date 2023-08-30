@@ -955,9 +955,9 @@ export const countryCodes = [
     code: "SA",
   },
   {
-    name: "Senegal",
-    dial_code: "+221",
-    code: "SN",
+    name: "Scotland",
+    dial_code: "+44",
+    code: "GB",
   },
   {
     name: "Serbia",
