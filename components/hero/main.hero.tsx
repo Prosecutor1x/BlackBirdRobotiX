@@ -1,23 +1,28 @@
 import React from "react";
 import Demo from "../demo/Demo.main";
 import ImageCarouselHero from "./swiper.hero";
+import Link from "next/link";
 
 const heroCardData = [
   {
     text: "Competitions",
     img: "/hero/comp.png",
+    link: "comingsoon",
   },
   {
     text: "Events",
     img: "/hero/event.png",
+    link: "/events",
   },
   {
     text: "Workshops",
     img: "/hero/workshop.png",
+    link: "comingsoon",
   },
   {
     text: "learning Kits",
     img: "/hero/kit.png",
+    link: "comingsoon",
   },
 ];
 
@@ -48,15 +53,18 @@ export default function Hero() {
       <div className="lg:flex justify-evenly lg:p-0 p-12">
         {heroCardData?.map((item, index) => {
           return (
-            <div className="rounded-2xl bg-white shadow-[2px_2px_3px_3px_#B0B3BB] lg:my-0 my-12 ">
-              <img
-                src={item.img}
-                className="rounded-2xl lg:h-[15rem]  lg:w-[17rem]  object-cover"
-              />
-              <h1 className="text-xl font-semibold text-center p-3">
-                {item.text}{" "}
-              </h1>
-            </div>
+            <Link href={item.link} target="_blank" rel="norefferer">
+              <div className="rounded-2xl bg-white shadow-[2px_2px_3px_3px_#B0B3BB] lg:my-0 my-12  active:scale-95">
+                <img
+                  src={item.img}
+                  className="rounded-2xl lg:h-[15rem]  lg:w-[17rem]  object-cover"
+                  draggable={false}
+                />
+                <h1 className="text-xl font-semibold text-center p-3">
+                  {item.text}{" "}
+                </h1>
+              </div>
+            </Link>
           );
         })}
       </div>

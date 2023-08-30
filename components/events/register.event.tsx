@@ -40,13 +40,16 @@ const Register = () => {
   const [popup, setPopup] = React.useState(0);
   const [uploadname, setUploadname] = useState<string>("");
   const [uploadStatus, setUploadStatus] = useState<string>("not-uploaded");
+
   const fileTypes = ["SB3"];
-  const targetDate = "2023-08-31T23:59:59";
+  const targetDate = "2023-08-29T23:59:59";
+  const targetDate2 = "2023-09-24T23:59:59";
   const [disable, setDisable] = useState<boolean>(false);
+  const [disable2, setDisable2] = useState<boolean>(false);
 
   const [file, setFile] = useState(null);
 
-  const handledisable = () => {
+  const handledisableUpload = () => {
     const now = new Date();
     const target = new Date(targetDate);
     const timeDifference = target.getTime() - now.getTime();
@@ -56,6 +59,16 @@ const Register = () => {
       setDisable(true);
     } else {
       setDisable(false);
+    }
+  };
+  const handledisableRegistration = () => {
+    const now = new Date();
+    const target = new Date(targetDate2);
+    const timeDifference = target.getTime() - now.getTime();
+    if (timeDifference > 0) {
+      setDisable2(false);
+    } else if (timeDifference < 0) {
+      setDisable2(true);
     }
   };
 
@@ -87,7 +100,8 @@ const Register = () => {
       setRegisterData((data) => {
         return { ...data, countryCode: tempCode.dial_code };
       });
-    handledisable();
+    handledisableUpload();
+    handledisableRegistration();
   }, [RegisterData.country]);
 
   async function addRegister(Registerdata: RegisterProps) {
@@ -124,7 +138,13 @@ const Register = () => {
 
   return (
     <>
-      <div className="flex justify-evenly  py-12">
+      <TimeRemaining
+        targetDate={targetDate2}
+        timenowtext="Registration Closed"
+        timetext="Registration Closes in"
+        timeuptext="Registration Closed"
+      />
+      <div className="flex justify-evenly  ">
         <div className="text-[#EDA822] w-1/3 border shadow-[2px_3px_2px_2px_#EDA822] p-4 rounded-lg  my-5 bg-white -mt-7">
           {popup == 3 ? (
             <div className="flex justify-center items-center flex-col ">
@@ -236,9 +256,11 @@ const Register = () => {
                 <div className="w-full flex justify-center"></div>
                 <div className="w-full flex justify-center">
                   <button
-                    className=" w-[95%] bg-orange-500 my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-[#EDA822] disabled:cursor-not-allowed disabled:active:scale-100 z-20"
+                    className=" w-[95%] bg-orange-500 my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-[#ebdec4] disabled:cursor-not-allowed disabled:active:scale-100 z-20"
                     disabled={
-                      !RegisterData.name || !RegisterData.phoneNumber
+                      disable2 ||
+                      !RegisterData.name ||
+                      !RegisterData.phoneNumber
                       // !RegisterData.age ||
                       // !RegisterData.course
                     }
@@ -260,18 +282,27 @@ const Register = () => {
           <p className="   mt-2">
             {" "}
             Scratch is free programming environments designed to engage students
-            in creative learning experience. The Scratch contest is not
-            affiliated with scratch or scratch foundation.
+            in creative learning experience.{" "}
+            <span className="font-thin italic text-lg">
+              This Scratch contest is not affiliated with scratch or scratch
+              foundation.
+            </span>
           </p>
         </div>
       </div>
       <div className="h-1/6 bg-[#EDA822] rounded-xl py-12 ">
         <h1 className="text-white text-4xl font-bold text-center ">STEPS</h1>
-        <TimeRemaining targetDate={targetDate} />
-        <div className="flex justify-evenly items-center ">
+        <TimeRemaining
+          targetDate={targetDate}
+          timenowtext="Submit Now !!"
+          timeuptext="Times Up !!"
+          timetext="Submission Starts in"
+          textcolor="white"
+        />
+        <div className="flex justify-evenly items-center py-10 ">
           <img src="/events/steps.png" className="w-1/3" />
 
-          <div className="h-[16rem] bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
+          <div className="h-[18rem]  bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
             {uploadStatus == "uploaded" || uploadStatus == "failed" ? null : (
               <>
                 <Input
@@ -280,6 +311,7 @@ const Register = () => {
                   type="text"
                   value={uploadname}
                   onChange={(e) => setUploadname(e.target.value)}
+                  className="my-2"
                 />
               </>
             )}

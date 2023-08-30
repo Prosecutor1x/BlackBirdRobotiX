@@ -5,6 +5,7 @@ import Demo from "@/components/events/register.event";
 import HeroEvents from "@/components/events/hero.events";
 import Register from "@/components/events/register.event";
 import Judge from "@/components/events/judgep.events";
+import TimeRemaining from "@/components/shared/timeremainning";
 
 type Props = {};
 
@@ -26,8 +27,9 @@ const Events = () => {
         </div>
       </div>
       {/* //Rest */}
-      <div className="px-6 py-6">
+      <div className="px-6 py-6 space-y-24">
         <HeroEvents />
+
         <Register />
         <Judge />
       </div>
