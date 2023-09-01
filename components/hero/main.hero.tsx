@@ -2,6 +2,7 @@ import React from "react";
 import Demo from "../demo/Demo.main";
 import ImageCarouselHero from "./swiper.hero";
 import Link from "next/link";
+import BannerModal from "../modals/banner.modal";
 
 const heroCardData = [
   {
