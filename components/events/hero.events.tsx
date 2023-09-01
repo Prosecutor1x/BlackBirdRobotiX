@@ -28,6 +28,17 @@ function HeroEvents() {
         </div>
         <img src="/events/pile.png" className="w-1/3" />
       </div>
+      <h1 className="mt-24 my-3 text-3xl">
+        Follow the Instructions as per the following video
+      </h1>
+      <video
+        src="/banner/event.mp4"
+        id="watch"
+        loop={true}
+        controls={true}
+        className="lg:w-4/5 rounded-3xl bg-[#EDA822] p-2 "
+        draggable={false}
+      />
     </div>
   );
 }

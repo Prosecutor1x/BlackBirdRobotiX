@@ -4,6 +4,7 @@ import Courses from "@/components/courses/main.courses";
 import Demo from "@/components/demo/Demo.main";
 import Header from "@/components/header/main.navbar";
 import Hero from "@/components/hero/main.hero";
+import BannerModal from "@/components/modals/banner.modal";
 import Socials from "@/components/socials/main.socials";
 import Stem from "@/components/stem/main.stem";
 import React from "react";
@@ -13,12 +14,14 @@ const Home = () => {
     <div className="bg-[#E4E5E7] w-screen h-screen ">
       <Header />
       <Socials />
+      <BannerModal />
       <div className="relative">
         <img src="/hero/bg.png" className="w-full" />
         <img
           src="/hero/ban.png"
           className="absolute top-1/4 right-20 h-[24rem] lg:block hidden"
         />
+
         <div className="absolute text-white font-quicksand top-1/4 w-1/2 left-24 hidden lg:block text-center">
           {" "}
           <h1 className="text-3xl  leading-none font-semibold ">
