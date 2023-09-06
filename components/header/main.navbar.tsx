@@ -23,11 +23,11 @@ export default function Header() {
     <div className="flex bg-gradient-to-r horizontal-gradient shadow-lg backdrop-blur-lg  justify-center h-20 space-x-16 z-40 fixed top-0  w-screen items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white font-quicksand ">
       <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
         <div className=" flex items-center">
-          <a href="#">
+          <a href="/">
             <img src="/fl.png" className="lg:h-24 w- " />
           </a>
-          <a href="#">
-            <img src="/bb.png" className="lg:h-40 "  />
+          <a href="/">
+            <img src="/bb.png" className="lg:h-40 " />
           </a>
         </div>
         <div className="hidden lg:flex md:gap-6 items-center">
@@ -49,11 +49,11 @@ export default function Header() {
             </h1>
           </Link> */}
 
-          {/* <a href="">
+          <a href="/events">
             <h1 className="anchor-custom text-white whitespace-nowrap font-semibold">
-              Events
+              Events ⭐
             </h1>
-          </a> */}
+          </a>
 
           <Menu>
             <MenuButton fontWeight={600} className="anchor-custom">
@@ -118,7 +118,9 @@ export default function Header() {
             </h1>
           </a> */}
           <a href="#book">
-          <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl  font-bold border-black border-2 text-black active:opacity-90 active:scale-95">Book Demo</button>
+            <button className="px-3 py-0.5 bg-[#FFFF00] rounded-2xl  font-bold border-black border-2 text-black active:opacity-90 active:scale-95">
+              Book Demo
+            </button>
           </a>
         </div>
       </div>
