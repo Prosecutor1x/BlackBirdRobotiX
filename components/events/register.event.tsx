@@ -42,8 +42,8 @@ const Register = () => {
   const [uploadStatus, setUploadStatus] = useState<string>("not-uploaded");
 
   const fileTypes = ["SB3"];
-  const targetDate = "2023-08-29T23:59:59";
-  const targetDate2 = "2023-09-24T23:59:59";
+  const targetDate = "2023-09-24T23:59:59";
+  const targetDate2 = "2023-09-20T23:59:59";
   const [disable, setDisable] = useState<boolean>(false);
   const [disable2, setDisable2] = useState<boolean>(false);
 
@@ -141,9 +141,10 @@ const Register = () => {
       <TimeRemaining
         targetDate={targetDate2}
         timenowtext="Registration Closed"
-        timetext="Registration Closes in"
+        timetext="Register Before "
         timeuptext="Registration Closed"
       />
+
       <div className="flex justify-evenly  ">
         <div className="text-[#EDA822] w-1/3 border shadow-[2px_3px_2px_2px_#EDA822] p-4 rounded-lg  my-5 bg-white -mt-7">
           {popup == 3 ? (
@@ -163,6 +164,9 @@ const Register = () => {
           ) : (
             <div>
               <div className="flex flex-col ">
+                <p className="text-center text-lg ">
+                  Register Before 20th September
+                </p>
                 {/* <h1 className=" text-center text-base font-bold ">
                                 Book a FREE Register
                             </h1> */}
@@ -296,7 +300,7 @@ const Register = () => {
           targetDate={targetDate}
           timenowtext="Submit Now !!"
           timeuptext="Times Up !!"
-          timetext="Submission Starts in"
+          timetext="Event Starts in"
           textcolor="white"
         />
         <div className="flex justify-evenly items-center py-10 ">
@@ -338,7 +342,7 @@ const Register = () => {
                   ) : (
                     <div className="flex flex-col justify-center items-center gap-2 text-black space-y-2 border-dotted border-2 border-red-800  p-8 rounded-xl">
                       <p className="text-center text-xl font-semibold  ">
-                        Upload your SB3 file here
+                        Upload your SB3 file here (Max 4MB)
                       </p>
 
                       <p className="text-center text-sm font-semibold bg-red-300 rounded-full p-4 active:scale-90 ">

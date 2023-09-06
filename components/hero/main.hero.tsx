@@ -89,7 +89,6 @@ export default function Hero() {
         <video
           src="/hero/vid.mp4"
           id="watch"
-          autoPlay={true}
           loop={true}
           controls={true}
           className="lg:w-3/5 rounded-2xl"

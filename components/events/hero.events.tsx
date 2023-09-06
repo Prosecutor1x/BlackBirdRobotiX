@@ -30,6 +30,11 @@ function HeroEvents() {
       </div>
       <h1 className="mt-24 my-3 text-3xl">
         Follow the Instructions as per the following video
+        <br></br>
+        <p className="text-xl my-4 font-semibold text-center">
+          {" "}
+          For any further Queries Call/Whatsapp us at +91 8013100878{" "}
+        </p>
       </h1>
       <video
         src="/banner/event.mp4"
