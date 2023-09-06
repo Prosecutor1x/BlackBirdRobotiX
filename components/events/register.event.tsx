@@ -137,7 +137,7 @@ const Register = () => {
   }
 
   return (
-    <>
+    <div className="">
       <TimeRemaining
         targetDate={targetDate2}
         timenowtext="Registration Closed"
@@ -145,19 +145,19 @@ const Register = () => {
         timeuptext="Registration Closed"
       />
 
-      <div className="flex justify-evenly  ">
-        <div className="text-[#EDA822] w-1/3 border shadow-[2px_3px_2px_2px_#EDA822] p-4 rounded-lg  my-5 bg-white -mt-7">
+      <div className="flex lg:flex-row  flex-col-reverse justify-evenly px-6 items-center">
+        <div className="text-[#EDA822] lg:w-1/3 border shadow-[2px_3px_2px_2px_#EDA822] p-4 rounded-lg  my-5 bg-white mt-12">
           {popup == 3 ? (
             <div className="flex justify-center items-center flex-col ">
               <img src="/RobotGif.gif" className="h-60" />
-              <h1 className="font-semibold text-xl text-green-500 text-center  my-6">
+              <h1 className="font-semibold lg:text-xl text-green-500 text-center  my-6">
                 Thank You, Registered Successfully.
               </h1>
             </div>
           ) : popup == 2 ? (
             <div className="flex justify-center items-center flex-col ">
               <img src="/RobotGif.gif" className="h-60" />
-              <h1 className="font-semibold text-xl text-yellow-500  my-6">
+              <h1 className="font-semibold lg:text-xl text-yellow-500  my-6">
                 Already Registered . Register with other phone number.
               </h1>
             </div>
@@ -257,8 +257,7 @@ const Register = () => {
                                 /> */}
                 </div>
 
-                <div className="w-full flex justify-center"></div>
-                <div className="w-full flex justify-center">
+                <div className="lg:w-full flex justify-center ">
                   <button
                     className=" w-[95%] bg-orange-500 my-4 text-base rounded-[24px] p-2 text-white font-semibold active:scale-95 disabled:bg-[#ebdec4] disabled:cursor-not-allowed disabled:active:scale-100 z-20"
                     disabled={
@@ -277,7 +276,7 @@ const Register = () => {
             </div>
           )}
         </div>
-        <div className="w-1/3 text-[22px] font-semibold space-y-4">
+        <div className="lg:w-1/3 lg:text-[22px] text-xl text-center lg:text-start lg:my-0 font-semibold space-y-4 ">
           <p className=" ">
             Scratch Contest unites participants of all continents. Scratch
             contest brings an opportunity for al to showcase creative and
@@ -294,8 +293,10 @@ const Register = () => {
           </p>
         </div>
       </div>
-      <div className="h-1/6 bg-[#EDA822] rounded-xl py-12 ">
-        <h1 className="text-white text-4xl font-bold text-center ">STEPS</h1>
+      <div className="flex flex-col my-12 lg:h-1/6 bg-[#EDA822] rounded-xl py-12  ">
+        <h1 className="text-white lg:text-4xl text-2xl font-bold text-center ">
+          STEPS
+        </h1>
         <TimeRemaining
           targetDate={targetDate}
           timenowtext="Submit Now !!"
@@ -303,8 +304,8 @@ const Register = () => {
           timetext="Event Starts in"
           textcolor="white"
         />
-        <div className="flex justify-evenly items-center py-10 ">
-          <img src="/events/steps.png" className="w-1/3" />
+        <div className="flex lg:flex-row flex-col justify-evenly items-center py-10  p-4 lg:p-0 ">
+          <img src="/events/steps.png" className="lg:w-1/3 my-6 lg:my-0" />
 
           <div className="h-[18rem]  bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
             {uploadStatus == "uploaded" || uploadStatus == "failed" ? null : (
@@ -328,20 +329,20 @@ const Register = () => {
               children={
                 <>
                   {uploadStatus == "uploaded" ? (
-                    <p className="text-center text-xl font-semibold text-green-500">
+                    <p className="text-center lg:text-xl font-semibold text-green-500">
                       File Uploaded Successfully
                     </p>
                   ) : uploadStatus == "failed" ? (
-                    <p className="text-center text-xl font-semibold text-red-500">
+                    <p className="text-center lg:text-xl font-semibold text-red-500">
                       File Upload Failed
                     </p>
                   ) : uploadStatus == "missing-username" ? (
-                    <p className="text-center text-xl font-semibold text-red-500">
+                    <p className="text-center lg:text-xl font-semibold text-red-500">
                       Please Enter a Valid Name and Click here again
                     </p>
                   ) : (
                     <div className="flex flex-col justify-center items-center gap-2 text-black space-y-2 border-dotted border-2 border-red-800  p-8 rounded-xl">
-                      <p className="text-center text-xl font-semibold  ">
+                      <p className="text-center lg:text-xl font-semibold  ">
                         Upload your SB3 file here (Max 4MB)
                       </p>
 
@@ -356,7 +357,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

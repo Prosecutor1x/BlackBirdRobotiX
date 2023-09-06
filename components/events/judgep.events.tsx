@@ -42,12 +42,12 @@ function Judge({}: Props) {
 
   return (
     <>
-      <h1 className="text-center text-3xl my-16 font-semibold ">Our Judges</h1>
-      <div className="flex justify-around items-center ">
+      <h1 className="text-center text-3xl my-16 font-semibold  ">Our Judges</h1>
+      <div className="flex lg:flex-row flex-col justify-around items-center px-6 ">
         {judgedata.map((judge, id) => {
           return (
             <div
-              className="bg-[#EDA822] h-[24rem] w-1/5 my-12 rounded-xl relative p-1"
+              className="bg-[#EDA822] h-[24rem] lg:w-1/5 my-12 rounded-xl relative p-1"
               key={id}
             >
               <Wrap className="absolute  left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
@@ -58,7 +58,6 @@ function Judge({}: Props) {
                     boxSize={36}
                     borderColor="orange.300"
                     borderWidth="4px"
-                    className=" object-contain "
                   />{" "}
                 </WrapItem>
               </Wrap>
