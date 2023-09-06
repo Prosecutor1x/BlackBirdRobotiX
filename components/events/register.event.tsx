@@ -42,8 +42,8 @@ const Register = () => {
   const [uploadStatus, setUploadStatus] = useState<string>("not-uploaded");
 
   const fileTypes = ["SB3"];
-  const targetDate = "2023-09-24T23:59:59";
-  const targetDate2 = "2023-09-20T23:59:59";
+  const targetDate = "2023-09-22T23:59:59";
+  const targetDate2 = "2023-09-19T23:59:59";
   const [disable, setDisable] = useState<boolean>(false);
   const [disable2, setDisable2] = useState<boolean>(false);
 

@@ -9,16 +9,6 @@ type Props = {};
 function Judge({}: Props) {
   const judgedata = [
     {
-      name: "Krishnarjun Nanda",
-      country: "India",
-      image: "/judges/arjun.jpg",
-      description:
-        "BTech 2022  in Computer Science and Artificial Intelligence from Heritage Institute of Technology.Tech Lead at Blackbird Robotix.  Developer at DetectBox.",
-      linkedin: "https://www.linkedin.com/in/krishnarjun-nanda-57763b1a0/",
-      // twitter: "https://twitter.com/_kArjun_",
-      // instagram: "https://www.instagram.com/__k.arjun__/",
-    },
-    {
       name: "Sourav Payra",
       country: "India",
       image: "/judges/du.jpg",
@@ -27,6 +17,16 @@ function Judge({}: Props) {
       linkedin: "https://www.linkedin.com/in/sourav-payra-141693183",
       // twitter: "https://twitter.com/",
       // instagram: "https://www.instagram.com/",
+    },
+    {
+      name: "Krishnarjun Nanda",
+      country: "India",
+      image: "/judges/arjun.jpg",
+      description:
+        "BTech 2022  in Computer Science and Artificial Intelligence from Heritage Institute of Technology.CTO at Blackbird Robotix.  Developer at DetectBox.",
+      linkedin: "https://www.linkedin.com/in/krishnarjun-nanda-57763b1a0/",
+      // twitter: "https://twitter.com/_kArjun_",
+      // instagram: "https://www.instagram.com/__k.arjun__/",
     },
     {
       name: "Biswayan Paul",
