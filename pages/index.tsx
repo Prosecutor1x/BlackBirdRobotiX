@@ -24,7 +24,7 @@ const Home = () => {
         <a href="/events" target="_blank" rel="norefferer">
           <img
             src="/banner/sevent.png"
-            className="absolute left-[30%] transform -translate-x-1/2 -translate-y-1/2 top-40 h-20  active:scale-95 animate-pulse "
+            className="absolute lg:left-[30%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:top-40 lg:h-20 top-28  active:scale-95 animate-pulse "
           />
         </a>
         <div className="absolute text-white font-quicksand top-1/4 w-1/2 left-24 hidden lg:block text-center">

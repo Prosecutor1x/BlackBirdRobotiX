@@ -51,7 +51,7 @@ const TimeRemaining: React.FC<TimeRemainingProps> = ({
 
   return (
     <div
-      className={`flex justify-center mb-6 gap-2  text-2xl font-quicksand font-semibold text-${textcolor}`}
+      className={`flex justify-center lg:mb-6 gap-2  lg:text-2xl text-xl font-quicksand font-semibold text-${textcolor}`}
     >
       {timeDiff < -86400000 ? (
         <p> {timeuptext}</p>
