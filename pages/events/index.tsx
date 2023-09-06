@@ -6,6 +6,7 @@ import HeroEvents from "@/components/events/hero.events";
 import Register from "@/components/events/register.event";
 import Judge from "@/components/events/judgep.events";
 import TimeRemaining from "@/components/shared/timeremainning";
+import Socials from "@/components/socials/main.socials";
 
 type Props = {};
 
@@ -13,6 +14,7 @@ const Events = () => {
   return (
     <div className="bg-[#E4E5E7] w-screen  font-quicksand">
       {/* //Header */}
+      <Socials />
       <div className="flex  horizontal-gradient2 shadow-lg backdrop-blur-lg  justify-center h-20 space-x-16 z-40 fixed top-0  w-screen items-center px-4 lg:px-20 xl:text-base lg:text-sm text-white font-quicksand ">
         <div className="flex justify-between w-full items-center  xl:space-x-8 lg:space-x-4">
           <div className=" flex items-center">
