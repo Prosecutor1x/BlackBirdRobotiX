@@ -21,7 +21,7 @@ function Judge({}: Props) {
     {
       name: "Krishnarjun Nanda",
       country: "India",
-      image: "/judges/arjun.jpg",
+      image: "/judges/arj2.jpeg",
       description:
         "BTech 2022  in Computer Science and Artificial Intelligence from Heritage Institute of Technology.CTO at Blackbird Robotix.  Developer at DetectBox.",
       linkedin: "https://www.linkedin.com/in/krishnarjun-nanda-57763b1a0/",
