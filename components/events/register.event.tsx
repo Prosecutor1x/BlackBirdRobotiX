@@ -279,12 +279,12 @@ const Register = () => {
         <div className="lg:w-1/3 lg:text-[22px] text-xl text-center lg:text-start lg:my-0 font-semibold space-y-4 ">
           <p className=" ">
             Scratch Contest unites participants of all continents. Scratch
-            contest brings an opportunity for al to showcase creative and
+            contest brings an opportunity for all to showcase creative and
             innovative skills.
           </p>
           <p className="   mt-2">
             {" "}
-            Scratch is free programming environments designed to engage students
+            Scratch is free programming environment designed to engage students
             in creative learning experience.{" "}
             <span className="font-thin italic text-lg">
               This Scratch contest is not affiliated with scratch or scratch
