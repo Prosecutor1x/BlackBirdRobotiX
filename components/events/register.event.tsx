@@ -42,8 +42,8 @@ const Register = () => {
   const [uploadStatus, setUploadStatus] = useState<string>("not-uploaded");
 
   const fileTypes = ["SB3"];
-  const targetDate = "2023-09-22T23:59:59";
-  const targetDate2 = "2023-09-19T23:59:59";
+  const targetDate = "2023-11-05T23:59:59";
+  const targetDate2 = "2023-11-4T23:59:59";
   const [disable, setDisable] = useState<boolean>(false);
   const [disable2, setDisable2] = useState<boolean>(false);
 
@@ -165,7 +165,7 @@ const Register = () => {
             <div>
               <div className="flex flex-col ">
                 <p className="text-center text-lg ">
-                  Register Before 20th September
+                  Register Before 5th November
                 </p>
                 {/* <h1 className=" text-center text-base font-bold ">
                                 Book a FREE Register
