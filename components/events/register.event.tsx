@@ -43,7 +43,7 @@ const Register = () => {
 
   const fileTypes = ["SB3"];
   const targetDate = "2023-11-05T23:59:59";
-  const targetDate2 = "2023-11-4T23:59:59";
+  const targetDate2 = "2023-11-04T23:59:59";
   const [disable, setDisable] = useState<boolean>(false);
   const [disable2, setDisable2] = useState<boolean>(false);
 
