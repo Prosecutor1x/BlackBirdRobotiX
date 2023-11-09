@@ -75,7 +75,10 @@ const Home = () => {
           Ecosystem
         </p>
 
-        <div className="flex lg:flex-row flex-col  items-center w-full gap-24" id="book">
+        <div
+          className="flex lg:flex-row flex-col  items-center w-full gap-24"
+          id="book"
+        >
           <div className="lg:w-1/2 lg:px-12  ">
             <Demo />
           </div>

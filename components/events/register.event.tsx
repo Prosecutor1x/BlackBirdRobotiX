@@ -56,11 +56,13 @@ const Register = () => {
     if (timeDifference > 0) {
       setDisable(true);
     } else if (timeDifference < -86400000) {
-      setDisable(true);
+      setDisable(false);
     } else {
       setDisable(false);
     }
   };
+
+  console.log(disable);
   const handledisableRegistration = () => {
     const now = new Date();
     const target = new Date(targetDate2);
