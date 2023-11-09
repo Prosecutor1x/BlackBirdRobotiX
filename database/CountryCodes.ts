@@ -950,14 +950,21 @@ export const countryCodes = [
     code: "ST",
   },
   {
-    name: "Saudi Arabia",
-    dial_code: "+966",
-    code: "SA",
+
+    name: 'Saudi Arabia',
+    dial_code: '+44',
+    code: 'SA',
   },
   {
-    name: "Scotland",
-    dial_code: "+44",
-    code: "GB",
+    name: 'Scotland',
+    dial_code: '+44',
+    code: 'GB',
+  },
+  {
+    name: 'Senegal',
+    dial_code: '+221',
+    code: 'SN',
+
   },
   {
     name: "Serbia",

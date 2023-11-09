@@ -72,7 +72,9 @@ const Demo = () => {
   }
 
   return (
+
     <div className="text-slate-700 border shadow-[2px_3px_2px_2px_#16CEF7] p-4 rounded-lg  bg-white ">
+
       {popup == 3 ? (
         <div className="flex justify-center items-center flex-col ">
           <img src="/RobotGif.gif" className="h-60" />
