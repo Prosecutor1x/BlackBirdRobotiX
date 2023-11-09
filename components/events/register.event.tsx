@@ -14,6 +14,7 @@ import { FileUploader } from "react-drag-drop-files";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
 import { uploadSB3File } from "@/functions/addFile";
 import TimeRemaining from "../shared/timeremainning";
+import { BsWhatsapp } from "react-icons/bs";
 
 interface RegisterProps {
   phoneNumber: string;
@@ -309,7 +310,7 @@ const Register = () => {
         <div className="flex lg:flex-row flex-col justify-evenly items-center py-10  p-4 lg:p-0 ">
           <img src="/events/steps.png" className="lg:w-1/3 my-6 lg:my-0" />
 
-          <div className="h-[18rem]  bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
+          <div className="h-[20rem]  bg-white flex flex-col justify-center items-center p-6 rounded-xl space-y-2 ">
             {uploadStatus == "uploaded" || uploadStatus == "failed" ? null : (
               <>
                 <Input
@@ -322,7 +323,6 @@ const Register = () => {
                 />
               </>
             )}
-
             <FileUploader
               handleChange={handleChange}
               name="file"
@@ -355,7 +355,17 @@ const Register = () => {
                   )}
                 </>
               }
-            />
+            />{" "}
+            <h1 className="justify-center">
+              Click This Icon to Submit in Whatsapp{" "}
+            </h1>
+            <a
+              href="https://wa.me/+918013100878"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BsWhatsapp className="text-2xl " />
+            </a>
           </div>
         </div>
       </div>
